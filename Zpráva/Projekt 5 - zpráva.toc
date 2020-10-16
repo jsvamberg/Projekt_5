@@ -1,3 +1,5 @@
 \babel@toc {czech}{}
 \contentsline {section}{\numberline {1}Zad\IeC {\'a}n\IeC {\'\i }}{2}% 
-\contentsline {section}{\numberline {2}N\IeC {\'a}vrh zjednodu\IeC {\v s}en\IeC {\'e}ho modelu}{3}% 
+\contentsline {section}{\numberline {2}Zjednodu\IeC {\v s}en\IeC {\'y} model}{3}% 
+\contentsline {subsection}{\numberline {2.1}N\IeC {\'a}vrh zjednodu\IeC {\v s}en\IeC {\'e}ho modelu}{3}% 
+\contentsline {subsection}{\numberline {2.2}Linearizace modelu}{4}% 
