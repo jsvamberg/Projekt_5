@@ -117,8 +117,8 @@
 		\subsection{Linearizace modelu}
 			Aby bylo s modelem snazší pracovat, linearizujeme ho v okolí pracovního bodu, tzn. $\varphi = 0$. Díky tomu můžeme uvažovat:
 			\begin{align*}
-				\sin\varphi &= \varphi\\
-				\cos\varphi	&= 1
+				\sin\varphi &\approx \varphi\\
+				\cos\varphi	&\approx 1
 			\end{align*}
 			Po dosazení do rovnic \ref{rovnice_model_1} a \ref{rovnice_model_2} dostaneme nové jednodušší rovnice \ref{rovnice_model_lin_1} a \ref{rovnice_model_lin_2}.
 			\begin{align}
@@ -129,13 +129,100 @@
 			\end{align}
 			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
-				\ddot{x}&=\frac{-ml\ddot{\varphi}+ml\dot{\varphi}^2\varphi+f}{m+M}\\
-				\ddot{\varphi}&=\frac{\ddot{x}+g\varphi}{l}
+				f_1: \ddot{x}&=\frac{-ml\ddot{\varphi}+ml\dot{\varphi}^2\varphi+f}{m+M}\\
+				f_2: \ddot{\varphi}&=\frac{\ddot{x}+g\varphi}{l}
 			\end{align*}
-			Vidíme, že rovnice na sobě závisí. Můžeme tedy do každé rovnice dosadit tu druhou.
+			Vidíme, že rovnice na sobě závisí. Můžeme tedy jednu dosadit do druhé a opačně.
 			\begin{align*}
 				\ddot{x}&=\frac{-mg\varphi+ml\dot{\varphi}^2\varphi+f}{2m+M}\\
 				\ddot{\varphi}&=\frac{ml\dot{\varphi}^2\varphi+f+mg\varphi+Mg\varphi}{l\left(2m+M\right)}
 			\end{align*}
-		
+		\subsection{Stavový popis systému}
+			Stavový popis systému uvažujeme ve tvaru:
+			\begin{align*}
+				\dot{x} &= \mathbf{A}\vec{x}+\mathbf{B}\vec{u}\\
+				y &= \mathbf{C}\vec{x}   %+\mathbf{D}\vec{u}
+			\end{align*}
+			, kde 
+			\begin{align*}
+				\mathbf{A} &= \left[\begin{matrix}
+					0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1\\
+					\frac{\partial f_1}{\partial \dot{x}} & \frac{\partial f_1}{\partial \dot{\varphi}} & \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial\varphi}\\
+					\frac{\partial f_2}{\partial \dot{x}} & \frac{\partial f_2}{\partial \dot{\varphi}} & \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial \varphi}	
+				\end{matrix}\right]\\
+				\mathbf{B} &= \left[\begin{matrix}
+					0\\
+					0\\
+					\frac{\partial f_1}{\partial f}\\
+					\frac{\partial f_2}{\partial f}
+				\end{matrix}\right]\\
+				\mathbf{C} &= \left[\begin{matrix}
+					1 & 0 & 0 & 0\\
+					0 & 1 & 0 & 0\\
+					0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1
+				\end{matrix}\right]
+			\end{align*}
+			Zavedeme si stavové proměnné
+			\begin{align*}
+				x_1 = \dot{x}\\
+				x_2 = \dot{\varphi}\\
+				x_3 = x\\
+				x_4 = \varphi\\
+				u = f
+			\end{align*}
+			Dosadíme do rovnic a budeme moct derivovat.
+			\begin{align*}
+				f_1: \ddot{x}&=\frac{l m x_4 x_2^2 + u - g m x_4}{M + 2m}\\
+				f_2: \ddot{\varphi}&=\frac{l m x_4 x_2^2 + u + M g x_4 + m g x_4}{l\left(M+2m\right)}
+			\end{align*}
+			Po zderivování dostaneme matice:
+			\begin{align*}
+				\mathbf{A} &= \left[\begin{matrix}
+					0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1\\
+					0 & \frac{2lmx_4x_2}{M+2m} & 0 & \frac{lmx_2^2-gm}{M+2m}\\
+					0 & \frac{2lmx_4x_2}{l\left(M+2m\right)} & 0 & \frac{lmx_2^2+Mg+mg}{l\left(M+2m\right)}
+				\end{matrix}\right]\\
+				\mathbf{B} &= \left[\begin{matrix}
+					0\\
+					0\\
+					\frac{1}{M+2m}\\
+					\frac{1}{l\left(M+2m\right)}
+				\end{matrix}\right]\\
+				\mathbf{C} &= \left[\begin{matrix}
+					1 & 0 & 0 & 0\\
+					0 & 1 & 0 & 0\\
+					0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1
+				\end{matrix}\right]
+			\end{align*}
+			, celý popis bude tedy ve tvaru
+			\begin{align*}
+				\dot{x} &= \left[\begin{matrix}
+					0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1\\
+					0 & \frac{2lmx_4x_2}{M+2m} & 0 & \frac{lmx_2^2-gm}{M+2m}\\
+					0 & \frac{2lmx_4x_2}{l\left(M+2m\right)} & 0 & \frac{lmx_2^2+Mg+mg}{l\left(M+2m\right)}
+				\end{matrix}\right]
+				\left[\begin{matrix}
+					x_1\\
+					x_2\\
+					x_3\\
+					x_4
+				\end{matrix}\right]+
+				\left[\begin{matrix}
+					0\\
+					0\\
+					\frac{1}{M+2m}\\
+					\frac{1}{l\left(M+2m\right)}
+				\end{matrix}\right]u\\
+				y &= \left[\begin{matrix}
+					1 & 0 & 0 & 0\\
+					0 & 1 & 0 & 0\\
+					0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1
+				\end{matrix}\right]x
+			\end{align*}
 \end{document}
