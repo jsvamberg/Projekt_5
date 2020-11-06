@@ -2,5 +2,4 @@
 \contentsline {section}{\numberline {1}Zad\IeC {\'a}n\IeC {\'\i }}{2}% 
 \contentsline {section}{\numberline {2}Zjednodu\IeC {\v s}en\IeC {\'y} model}{3}% 
 \contentsline {subsection}{\numberline {2.1}N\IeC {\'a}vrh zjednodu\IeC {\v s}en\IeC {\'e}ho modelu}{3}% 
-\contentsline {subsection}{\numberline {2.2}Linearizace modelu}{4}% 
-\contentsline {subsection}{\numberline {2.3}Stavov\IeC {\'y} popis syst\IeC {\'e}mu}{5}% 
+\contentsline {subsection}{\numberline {2.2}Stavov\IeC {\'y} popis syst\IeC {\'e}mu}{4}% 

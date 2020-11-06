@@ -109,35 +109,30 @@
 			\end{align*}
 			, kde f je síla působící na vozík. Nyní můžeme dopočítat dvě rovnice modelu vozík-kyvadlo.
 			\begin{align}
-				\left(M+m\right)\ddot{x}+ml\ddot{\varphi}\cos\varphi-ml\dot{\varphi}^2\sin\varphi = f
+				\left(M+m\right)\ddot{x}+ml\ddot{\varphi}\cos(\varphi)-ml\dot{\varphi}^2\sin(\varphi) = f
 				\label{rovnice_model_1}\\
-				\ddot{x}\cos\varphi+g\sin\varphi-l\ddot{\varphi} = 0
+				\ddot{x}\cos(\varphi)+g\sin(\varphi)-l\ddot{\varphi} = 0
 			    \label{rovnice_model_2}
-			\end{align}
-		\subsection{Linearizace modelu}
-			Aby bylo s modelem snazší pracovat, linearizujeme ho v okolí pracovního bodu, tzn. $\varphi = 0$. Díky tomu můžeme uvažovat:
-			\begin{align*}
-				\sin\varphi &\approx \varphi\\
-				\cos\varphi	&\approx 1
-			\end{align*}
-			Po dosazení do rovnic \ref{rovnice_model_1} a \ref{rovnice_model_2} dostaneme nové jednodušší rovnice \ref{rovnice_model_lin_1} a \ref{rovnice_model_lin_2}.
-			\begin{align}
-				\left(M+m\right)\ddot{x}+ml\ddot{\varphi}-ml\dot{\varphi}^2\varphi = f
-				\label{rovnice_model_lin_1}\\
-				\ddot{x}+g\varphi-l\ddot{\varphi} = 0
-			    \label{rovnice_model_lin_2}
 			\end{align}
 			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
-				f_1: \ddot{x}&=\frac{-ml\ddot{\varphi}+ml\dot{\varphi}^2\varphi+f}{m+M}\\
-				f_2: \ddot{\varphi}&=\frac{\ddot{x}+g\varphi}{l}
+				\ddot{x} &= \frac{-ml\ddot{\varphi}\cos(\varphi)+ml\dot{\varphi}^2\sin(\varphi)+f}{M+m}\\
+				\ddot{\varphi}&=\frac{\ddot{x}\cos(\varphi)+g\sin(\varphi)}{l}
 			\end{align*}
 			Vidíme, že rovnice na sobě závisí. Můžeme tedy jednu dosadit do druhé a opačně.
 			\begin{align*}
-				\ddot{x}&=\frac{-mg\varphi+ml\dot{\varphi}^2\varphi+f}{2m+M}\\
-				\ddot{\varphi}&=\frac{ml\dot{\varphi}^2\varphi+f+mg\varphi+Mg\varphi}{l\left(2m+M\right)}
+				\ddot{x}&=\frac{-mg\sin(\varphi)\cos(\varphi)+m\dot{\varphi}^2\sin(\varphi)+u}{M+m+m\cos^2(\varphi)}\\
+				\ddot{\varphi}&=\frac{ml\dot{\varphi}^2\sin(\varphi)\cos(\varphi)+u\cos(\varphi)+mg\sin(\varphi)}{l\left(M+m+m\cos^2(\varphi)\right)}
 			\end{align*}
 		\subsection{Stavový popis systému}
+			Zavedeme si stavové proměnné
+			\begin{align*}
+				x &= y_1\\
+				\varphi &= y_2\\
+				\dot{y_1} = \dot{x} &= y_3\\
+				\dot{y_2} = \dot{\varphi} &= y_4\\
+				f &= u
+			\end{align*}
 			Stavový popis systému uvažujeme ve tvaru:
 			\begin{align*}
 				\dot{x} &= \mathbf{A}\vec{x}+\mathbf{B}\vec{u}\\
@@ -146,16 +141,16 @@
 			, kde 
 			\begin{align*}
 				\mathbf{A} &= \left[\begin{matrix}
-					0 & 0 & 1 & 0\\
-					0 & 0 & 0 & 1\\
-					\frac{\partial f_1}{\partial \dot{x}} & \frac{\partial f_1}{\partial \dot{\varphi}} & \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial\varphi}\\
-					\frac{\partial f_2}{\partial \dot{x}} & \frac{\partial f_2}{\partial \dot{\varphi}} & \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial \varphi}	
+					\frac{\partial f_1}{\partial y_1} & \frac{\partial f_1}{\partial y_2} & \frac{\partial f_1}{\partial y_3} & \frac{\partial f_1}{\partial y_4}\\
+					\frac{\partial f_2}{\partial y_1} & \frac{\partial f_2}{\partial y_2} & \frac{\partial f_2}{\partial y_3} & \frac{\partial f_2}{\partial y_4}\\
+					\frac{\partial f_3}{\partial y_1} & \frac{\partial f_3}{\partial y_2} & \frac{\partial f_3}{\partial y_3} & \frac{\partial f_3}{\partial y_4}\\
+					\frac{\partial f_4}{\partial y_1} & \frac{\partial f_4}{\partial y_2} & \frac{\partial f_4}{\partial y_3} & \frac{\partial f_4}{\partial y_4}	
 				\end{matrix}\right]\\
 				\mathbf{B} &= \left[\begin{matrix}
-					0\\
-					0\\
-					\frac{\partial f_1}{\partial f}\\
-					\frac{\partial f_2}{\partial f}
+					\frac{\partial f_1}{\partial u}\\
+					\frac{\partial f_2}{\partial u}\\
+					\frac{\partial f_3}{\partial u}\\
+					\frac{\partial f_4}{\partial u}
 				\end{matrix}\right]\\
 				\mathbf{C} &= \left[\begin{matrix}
 					1 & 0 & 0 & 0\\
@@ -164,65 +159,85 @@
 					0 & 0 & 0 & 1
 				\end{matrix}\right]
 			\end{align*}
-			Zavedeme si stavové proměnné
-			\begin{align*}
-				x_1 = \dot{x}\\
-				x_2 = \dot{\varphi}\\
-				x_3 = x\\
-				x_4 = \varphi\\
-				u = f
-			\end{align*}
 			Dosadíme do rovnic a budeme moct derivovat.
 			\begin{align*}
-				f_1: \ddot{x}&=\frac{l m x_4 x_2^2 + u - g m x_4}{M + 2m}\\
-				f_2: \ddot{\varphi}&=\frac{l m x_4 x_2^2 + u + M g x_4 + m g x_4}{l\left(M+2m\right)}
+				f_1: \dot{y_1} &= y_3\\
+				f_2: \dot{y_2} &= y_4\\
+				f_3: \dot{y_3} &= \frac{-mg\sin(y_2)\cos(y_2)+my_4^2\sin(y_2)+u}{M+m+m\cos^2(y_2)}\\
+				f_4: \dot{y_4} &= \frac{mly_4^2\sin(y_2)\cos(y_2)+u\cos(y_2)+mg\sin(y_2)+Mg\sin(y_2)}{l\left(M+m+m\cos^2(y_2)\right)}
 			\end{align*}
-			Po zderivování dostaneme matice:
+			Po zderivování dostaneme hodnoty:
+			\begin{align*}
+				\frac{\partial f_1}{\partial y_1} &= 0\\
+				\frac{\partial f_1}{\partial y_2} &= 0\\
+				\frac{\partial f_1}{\partial y_3} &= 1\\
+				\frac{\partial f_1}{\partial y_4} &= 0\\
+				\frac{\partial f_2}{\partial y_1} &= 0\\
+				\frac{\partial f_2}{\partial y_2} &= 0\\
+				\frac{\partial f_2}{\partial y_3} &= 0\\
+				\frac{\partial f_2}{\partial y_4} &= 1\\
+				\frac{\partial f_3}{\partial y_1} &= 0\\
+				\frac{\partial f_3}{\partial y_2} &= \frac{m\left(g-2g\cos^2(y_2)+y_4^2\cos(y_2)\right)}{M+m+m\cos^2(y_2)}+\frac{2m\cos(y_2)\sin(y_2)\left(m\sin(y_2)y_4^2+u-gm\cos(y_2)\sin(y_2)\right)}{\left(M+m+m\cos^2(y_2)\right)^2}\\
+				\frac{\partial f_3}{\partial y_3} &= 0 \\
+				\frac{\partial f_3}{\partial y_4} &= \frac{2my_4\sin(y_2)}{M+m+m\cos^2(y_2)}\\
+				\frac{\partial f_4}{\partial y_1} &= 0\\
+				\frac{\partial f_4}{\partial y_2} &= \frac{2\left(lm\left(2\cos^2(y_2)-1\right)y_4^2-u\sin(y_2)+gm\cos(y_2)+gM\cos(y_2)\right)}{l\left(2M+3m+m\left(2\cos^2(y_2)-1\right)\right)}+\\
+				&+\frac{2m\cos(y_2)\sin(y_2)\left(lm\cos(y_2)\sin(y_2)y_4^2+u\cos(y_2)+gm\sin(y_2)+gM\sin(y_2)\right)}{l\left(M+m+m\cos^2(y_2)\right)}\\
+				\frac{\partial f_4}{\partial y_3} &= 0\\
+				\frac{\partial f_3}{\partial y_4} &= \frac{2my_4\cos(y_2)\sin(y_2)}{M+m+m\cos^2(y_2)}\\
+				\\
+				\frac{\partial f_1}{\partial u} &= 0\\
+				\frac{\partial f_2}{\partial u} &= 0\\
+				\frac{\partial f_3}{\partial u} &= \frac{1}{M+m+m\cos^2(y_2)}\\	
+			    \frac{\partial f_1}{\partial u} &= \frac{\cos(y_2)}{l\left(M+m+m\cos^2(y_2)\right)}
+			\end{align*}
+			Linearizovat chceme okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = 0$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, tak tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
 			\begin{align*}
 				\mathbf{A} &= \left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & \frac{2lmx_4x_2}{M+2m} & 0 & \frac{lmx_2^2-gm}{M+2m}\\
-					0 & \frac{2lmx_4x_2}{l\left(M+2m\right)} & 0 & \frac{lmx_2^2+Mg+mg}{l\left(M+2m\right)}
+					0 & \frac{-gm}{M+2m} & 0 & 0\\
+					0 & \frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
 				\end{matrix}\right]\\
 				\mathbf{B} &= \left[\begin{matrix}
 					0\\
 					0\\
 					\frac{1}{M+2m}\\
 					\frac{1}{l\left(M+2m\right)}
-				\end{matrix}\right]\\
-				\mathbf{C} &= \left[\begin{matrix}
-					1 & 0 & 0 & 0\\
-					0 & 1 & 0 & 0\\
-					0 & 0 & 1 & 0\\
-					0 & 0 & 0 & 1
 				\end{matrix}\right]
 			\end{align*}
-			, celý popis bude tedy ve tvaru
+			Výsledný stavový popis v okolí pracovního bodu $\left[\dot{x}, \dot{\varphi}, x, \varphi\right]=\left[0, 0, 0, 0\right]$ bude tedy vypadat:
 			\begin{align*}
-				\dot{x} &= \left[\begin{matrix}
+				\dot{x}&=\left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & \frac{2lmx_4x_2}{M+2m} & 0 & \frac{lmx_2^2-gm}{M+2m}\\
-					0 & \frac{2lmx_4x_2}{l\left(M+2m\right)} & 0 & \frac{lmx_2^2+Mg+mg}{l\left(M+2m\right)}
+					0 & \frac{-gm}{M+2m} & 0 & 0\\
+					0 & \frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
 				\end{matrix}\right]
 				\left[\begin{matrix}
-					x_1\\
-					x_2\\
-					x_3\\
-					x_4
-				\end{matrix}\right]+
+					y_1\\
+					y_2\\
+					y_3\\
+					y_4
+				\end{matrix}\right]
+				+
 				\left[\begin{matrix}
 					0\\
 					0\\
 					\frac{1}{M+2m}\\
 					\frac{1}{l\left(M+2m\right)}
 				\end{matrix}\right]u\\
-				y &= \left[\begin{matrix}
+				y&=\left[\begin{matrix}
 					1 & 0 & 0 & 0\\
 					0 & 1 & 0 & 0\\
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1
-				\end{matrix}\right]x
+				\end{matrix}\right]
+				\left[\begin{matrix}
+					y_1\\
+					y_2\\
+					y_3\\
+					y_4
+				\end{matrix}\right]
 			\end{align*}
 \end{document}
