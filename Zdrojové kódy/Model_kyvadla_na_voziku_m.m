@@ -2,7 +2,7 @@ clear all;
 clc;
 close all;
 
-%%
+%% Dosazení jedné rovnice za druhou
 syms ddphi_s ddx_s dx dphi x phi M m l f g
 
 ddx_v = (-m*l*ddphi_s+m*l*(dphi^2)*phi+f)/(m+M)
@@ -20,13 +20,13 @@ ddphi = simplifyFraction(ddphi)
 %  
 % ddphi_v = (g*phi + (l*m*phi*dphi^2 + f - m*(ddx + g*phi))/(M + m))/l
 
-%%
+%% Parciální derivování
 syms x1 x2 x3 x4 u m g M l 
 
 f1 = x3
 f2 = x4
 f3 = (-m*g*sin(x2)*cos(x2)+m*x4^2*sin(x2)+u)/(M+m+m*(cos(x2))^2)
-f4 = (m*l*x4^2*sin(x2)*cos(x2)+u*cos(x2)+m*g*sin(x2)+M*g*sin(x2))/(l*(m+M+m*(cos(x2))^2))
+f4 = ((m*l*x4^2*sin(x2)*cos(x2)+u*cos(x2)+m*g*sin(x2)+M*g*sin(x2))/(l*(m+M+m*(cos(x2))^2)))-x4
 
 df1_dx1 = diff(f1, x1);
 df1_dx2 = diff(f1, x2);
@@ -63,7 +63,7 @@ B = [df1_du;
     df3_du;
     df4_du]
 
-%%
+%% linearizace v bode [0, 0, 0, 0]
 df1_dx1 = subs(df1_dx1, [x1 x2 x3 x4], [0 0 0 0]);
 df1_dx2 = subs(df1_dx2, [x1 x2 x3 x4], [0 0 0 0]);
 df1_dx3 = subs(df1_dx3, [x1 x2 x3 x4], [0 0 0 0]);
@@ -98,14 +98,16 @@ B = [df1_du;
     df2_du;
     df3_du;
     df4_du]
-%%
+
+%% Konkretizace hodnot a zjisteni konkretniho modelu a prenosovych funkci
+clear;
 f = 0; %sila pusobici na vozik
 M = 50; %hmostnost voziku
 m = 5; %hmotnost tělesa na lane
 dx = 0; %pocatecni rychlost voziku
 x = 0; %pocatecni poloh voziku
 dphi = 0; %pocatecni rychlost kyvadla
-phi = 0; %pocatecni poloha kyvadla ve °
+phi = 0*pi/180; %pocatecni poloha kyvadla ve °
 l = 1; %delka zavesu
 g = 9.81; %gravitacni sila
 
@@ -125,5 +127,10 @@ D = 0
 
 sys = ss(A, B, C, D)
 
-tf(ss(A, B, C, D))
-%step(sys)
+tf = tf(ss(A, B, C, D))
+
+
+out=sim('Model_kyvadla_na_voziku_m_slx.slx',50)
+
+
+plot(out.simout)
