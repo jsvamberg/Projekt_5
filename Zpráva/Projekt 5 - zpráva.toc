@@ -2,4 +2,7 @@
 \contentsline {section}{\numberline {1}Zad\IeC {\'a}n\IeC {\'\i }}{2}% 
 \contentsline {section}{\numberline {2}Zjednodu\IeC {\v s}en\IeC {\'y} model}{3}% 
 \contentsline {subsection}{\numberline {2.1}N\IeC {\'a}vrh zjednodu\IeC {\v s}en\IeC {\'e}ho modelu}{3}% 
-\contentsline {subsection}{\numberline {2.2}Stavov\IeC {\'y} popis syst\IeC {\'e}mu}{4}% 
+\contentsline {subsection}{\numberline {2.2}Stavov\IeC {\'y} popis zjednodu\IeC {\v s}en\IeC {\'e}ho modelu}{4}% 
+\contentsline {subsection}{\numberline {2.3}Dosazen\IeC {\'\i } konkr\IeC {\'e}tn\IeC {\'\i }ch hodnot}{6}% 
+\contentsline {subsection}{\numberline {2.4}Grafy}{7}% 
+\contentsline {section}{\numberline {3}N\IeC {\'a}vrh regul\IeC {\'a}toru}{11}% 

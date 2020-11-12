@@ -76,7 +76,7 @@
 			Po zavěšení jednoduchého kyvadla na vozík(obr. \ref{schema vozik-kyvadlo}) budeme muset ještě do modelu přidat dynamiku vozíku o hmotnosti $M$. Na ten může působit síla ve směru osy x. Pro hmotný bod, zavěšený na laně budeme muset spočítat souřadnice $\left[u, v\right]$, jelikož při pohybu vozíku se nepohybuje po jasné trajektorii (kružnice, přímka):
 			\begin{align*}
 				u &= x + l\sin\varphi \rightarrow \dot{u} = \dot{x}+l\dot{\varphi}\cos\varphi\\
-				v &= l\cos\varphi \rightarrow \dot{v} = -l\dot{\varphi}\sin\varphi
+				v &= -l\cos\varphi \rightarrow \dot{v} = l\dot{\varphi}\sin\varphi
 			\end{align*} 
 			K odvození modelu využijeme Lagrangeovu metodu.\\
 			Potenciální energii $V$ budeme uvažovat stejnou, jako u jednoduchého kyvadla.
@@ -85,46 +85,44 @@
 			\end{align*}
 			Jako základ pro vzorec kinetické energie použijeme vzorec kinetické energie obyčejného matematického kyvadla $T = \frac{1}{2}mv^2$. Musíme ale uvažovat rychlost ve směru všech souřadnic ($x$, $u$, $v$).
 			\begin{align*}
-				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\dot{u}^2+\frac{1}{2}m\dot{v}^2
+				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\dot{x}^2+\frac{1}{2}m\dot{u}^2+\frac{1}{2}m\dot{v}^2
 			\end{align*}
 			Po dosazení souřadnic pro hmotný bod zavěšený na laně dostaneme kinetickou energii ve tvaru:
 			\begin{align*}
-				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\left(\dot{x}+l\dot{\varphi}\cos\varphi\right)^2+\frac{1}{2}m\left(-l\dot{\varphi}\sin\varphi\right)^2
+				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\dot{x}^2+\frac{1}{2}m\left(\dot{x}+l\dot{\varphi}\cos\varphi\right)^2+\frac{1}{2}m\left(l\dot{\varphi}\sin\varphi\right)^2
 			\end{align*}
 			Zjistíme si Lagrangián $L = T - V$:
 			\begin{align*}
-				L = \frac{1}{2}M\dot{x}+\frac{1}{2}m\left(\dot{x}+l\dot{\varphi}\cos\varphi\right)^2+\frac{1}{2}m\left(l\dot{\varphi}\sin\varphi\right)^2+mgl\cos\varphi
+				L = \frac{1}{2}M\dot{x}+\frac{1}{2}m\dot{x}^2+\frac{1}{2}m\left(\dot{x}+l\dot{\varphi}\cos\varphi\right)^2+\frac{1}{2}m\left(l\dot{\varphi}\sin\varphi\right)^2+mgl\cos\varphi
 			\end{align*}
 			, který nyní budeme parciálně derivovat.
 			\begin{align*}
-				\frac{\partial L}{\partial\dot{x}} &= M\dot{x}+m\dot{x}+ml\dot{\varphi}\cos\varphi\\
+				\frac{\partial L}{\partial\dot{x}} &= M\dot{x}+2m\dot{x}+ml\dot{\varphi}\cos\varphi\\
 				\frac{\partial L}{\partial x} &= 0\\
-				\frac{\partial L}{\partial \dot{\varphi}} &= m\dot{x}l\cos\varphi - ml^2\dot{\varphi}\\
-				\frac{\partial L}{\partial \varphi} &= -m\dot{x}l\dot{\varphi}\sin\varphi-l^2\dot{\varphi}^2\cos\varphi\sin\varphi+ml^2\dot{\varphi}^2\sin\varphi\cos\varphi-mgl\sin\varphi
+				\frac{\partial L}{\partial \dot{\varphi}} &= \dot{\varphi}l^2m\sin(\varphi)+\dot{x}lm\cos(\varphi)+\dot{\varphi}l^2m\cos^2(\varphi)\\
+				\frac{\partial L}{\partial \varphi} &= \dot{\varphi}^2l^2m\cos(\varphi)\sin(\varphi)-glm\sin(\varphi)-\dot{\varphi}\dot{x}lm\sin(\varphi)-\dot{\varphi}^2l^2m\sin(\varphi)\cos(\varphi)
 			\end{align*}
 			Vztahy pro hledané dvě rovnice vypadají následovně:
 			\begin{align*}
-				\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial \dot{x}}\right)-\frac{\partial L}{\partial x} = f\\
-				\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial \dot{\varphi}}\right)-\frac{\partial L}{\partial \varphi} = 0
+				\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial \dot{x}}\right) - \frac{\partial L}{\partial x} = f\\
+				\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial \dot{\varphi}}\right) - \frac{\partial L}{\partial \varphi} = 0
 			\end{align*}
 			, kde f je síla působící na vozík. Nyní můžeme dopočítat dvě rovnice modelu vozík-kyvadlo.
-			\begin{align}
-				\left(M+m\right)\ddot{x}+ml\ddot{\varphi}\cos(\varphi)-ml\dot{\varphi}^2\sin(\varphi) = f
-				\label{rovnice_model_1}\\
-				\ddot{x}\cos(\varphi)+g\sin(\varphi)-l\ddot{\varphi} = 0
-			    \label{rovnice_model_2}
-			\end{align}
-			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
-				\ddot{x} &= \frac{-ml\ddot{\varphi}\cos(\varphi)+ml\dot{\varphi}^2\sin(\varphi)+f}{M+m}\\
-				\ddot{\varphi}&=\frac{\ddot{x}\cos(\varphi)+g\sin(\varphi)}{l}
+				M\ddot{x}+2m\ddot{x}+\ddot{\varphi}lm\cos(\varphi)-\dot{\varphi}lm\sin(\varphi) = f\\
+				\ddot{\varphi}l^2m+\ddot{x}lm\cos(\varphi)-\dot{x}lm\sin(\varphi)+glm\sin(\varphi)+lm\dot{\varphi}\dot{x}\sin(\varphi)=0
+			\end{align*}
+thr			Dále můžeme vyjádřit nejvyšší derivace:
+			\begin{align*}
+				\ddot{x} &= \frac{-\ddot{\varphi}lm\cos(\varphi)-\dot{\varphi}lmsin(\varphi)+f}{M+2m}\\
+				\ddot{\varphi} &= \frac{-\ddot{x}lm\cos(\varphi)+\dot{x}lm\sin(\varphi)-glm\sin(\varphi)-lm\dot{\varphi}\dot{x}\sin(\varphi)}{l^2m}
 			\end{align*}
 			Vidíme, že rovnice na sobě závisí. Můžeme tedy jednu dosadit do druhé a opačně.
 			\begin{align*}
-				\ddot{x}&=\frac{-mg\sin(\varphi)\cos(\varphi)+m\dot{\varphi}^2\sin(\varphi)+u}{M+m+m\cos^2(\varphi)}\\
-				\ddot{\varphi}&=\frac{ml\dot{\varphi}^2\sin(\varphi)\cos(\varphi)+u\cos(\varphi)+mg\sin(\varphi)}{l\left(M+m+m\cos^2(\varphi)\right)}
+				\ddot{x} = &\frac{f-\dot{\varphi}lm\sin(\varphi)-\dot{x}m\cos(\varphi)\sin(\varphi)+gm\cos(\varphi)\sin(\varphi)+\dot{\varphi}\dot{x}m\cos(\varphi)\sin(\varphi)}{M+2m-m\cos^2(\varphi)}\\
+				\ddot{\varphi} = &-\frac{f\cos(\varphi)-2\dot{x}m\sin(\varphi)+2gm\sin(\varphi)-M\dot{x}\sin(\varphi)+Mg\sin(\varphi)+M\dot{\varphi}\dot{x}\sin(\varphi)}{l(M+2m+m\cos^2(\varphi))}+\\&+\frac{2\dot{\varphi}\dot{x}m\sin(\varphi)-\dot{\varphi}lm\cos(\varphi)}{l(M+2m+m\cos^2(\varphi))}
 			\end{align*}
-		\subsection{Stavový popis systému}
+		\subsection{Stavový popis zjednodušeného modelu}
 			Zavedeme si stavové proměnné
 			\begin{align*}
 				x &= y_1\\
@@ -161,49 +159,24 @@
 			\end{align*}
 			Dosadíme do rovnic a budeme moct derivovat.
 			\begin{align*}
-				f_1: \dot{y_1} &= y_3\\
-				f_2: \dot{y_2} &= y_4\\
-				f_3: \dot{y_3} &= \frac{-mg\sin(y_2)\cos(y_2)+my_4^2\sin(y_2)+u}{M+m+m\cos^2(y_2)}\\
-				f_4: \dot{y_4} &= \frac{mly_4^2\sin(y_2)\cos(y_2)+u\cos(y_2)+mg\sin(y_2)+Mg\sin(y_2)}{l\left(M+m+m\cos^2(y_2)\right)}
+				f_1: \dot{y_1} = &y_3\\
+				f_2: \dot{y_2} = &y_4\\
+				f_3: \dot{y_3} = &\frac{f-\dot{\varphi}lm\sin(\varphi)-\dot{x}m\cos(\varphi)\sin(\varphi)+gm\cos(\varphi)\sin(\varphi)+\dot{\varphi}\dot{x}m\cos(\varphi)\sin(\varphi)}{M+2m-m\cos^2(\varphi)}\\
+				f_4: \dot{y_4} = &-\frac{f\cos(\varphi)-2\dot{x}m\sin(\varphi)+2gm\sin(\varphi)-M\dot{x}\sin(\varphi)+Mg\sin(\varphi)+M\dot{\varphi}\dot{x}\sin(\varphi)}{l(M+2m+m\cos^2(\varphi))}+\\&+\frac{2\dot{\varphi}\dot{x}m\sin(\varphi)-\dot{\varphi}lm\cos(\varphi)}{l(M+2m+m\cos^2(\varphi))}
 			\end{align*}
-			Po zderivování dostaneme hodnoty:
-			\begin{align*}
-				\frac{\partial f_1}{\partial y_1} &= 0\\
-				\frac{\partial f_1}{\partial y_2} &= 0\\
-				\frac{\partial f_1}{\partial y_3} &= 1\\
-				\frac{\partial f_1}{\partial y_4} &= 0\\
-				\frac{\partial f_2}{\partial y_1} &= 0\\
-				\frac{\partial f_2}{\partial y_2} &= 0\\
-				\frac{\partial f_2}{\partial y_3} &= 0\\
-				\frac{\partial f_2}{\partial y_4} &= 1\\
-				\frac{\partial f_3}{\partial y_1} &= 0\\
-				\frac{\partial f_3}{\partial y_2} &= \frac{m\left(g-2g\cos^2(y_2)+y_4^2\cos(y_2)\right)}{M+m+m\cos^2(y_2)}+\frac{2m\cos(y_2)\sin(y_2)\left(m\sin(y_2)y_4^2+u-gm\cos(y_2)\sin(y_2)\right)}{\left(M+m+m\cos^2(y_2)\right)^2}\\
-				\frac{\partial f_3}{\partial y_3} &= 0 \\
-				\frac{\partial f_3}{\partial y_4} &= \frac{2my_4\sin(y_2)}{M+m+m\cos^2(y_2)}\\
-				\frac{\partial f_4}{\partial y_1} &= 0\\
-				\frac{\partial f_4}{\partial y_2} &= \frac{2\left(lm\left(2\cos^2(y_2)-1\right)y_4^2-u\sin(y_2)+gm\cos(y_2)+gM\cos(y_2)\right)}{l\left(2M+3m+m\left(2\cos^2(y_2)-1\right)\right)}+\\
-				&+\frac{2m\cos(y_2)\sin(y_2)\left(lm\cos(y_2)\sin(y_2)y_4^2+u\cos(y_2)+gm\sin(y_2)+gM\sin(y_2)\right)}{l\left(M+m+m\cos^2(y_2)\right)}\\
-				\frac{\partial f_4}{\partial y_3} &= 0\\
-				\frac{\partial f_3}{\partial y_4} &= \frac{2my_4\cos(y_2)\sin(y_2)}{M+m+m\cos^2(y_2)}\\
-				\\
-				\frac{\partial f_1}{\partial u} &= 0\\
-				\frac{\partial f_2}{\partial u} &= 0\\
-				\frac{\partial f_3}{\partial u} &= \frac{1}{M+m+m\cos^2(y_2)}\\	
-			    \frac{\partial f_1}{\partial u} &= \frac{\cos(y_2)}{l\left(M+m+m\cos^2(y_2)\right)}
-			\end{align*}
-			Linearizovat chceme okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = 0$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, tak tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
+			Po zderivování můžeme linearizovat. To chceme udělat okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = 0$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, takže tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
 			\begin{align*}
 				\mathbf{A} &= \left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & \frac{-gm}{M+2m} & 0 & 0\\
-					0 & \frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
+					0 & \frac{gm}{M+m} & 0 & 0\\
+					0 & -\frac{mg+Mg}{l\left(M+3m\right)} & 0 & 0
 				\end{matrix}\right]\\
 				\mathbf{B} &= \left[\begin{matrix}
 					0\\
 					0\\
-					\frac{1}{M+2m}\\
-					\frac{1}{l\left(M+2m\right)}
+					\frac{1}{M+m}\\
+					\frac{-1}{l\left(M+3m\right)}
 				\end{matrix}\right]
 			\end{align*}
 			Výsledný stavový popis v okolí pracovního bodu $\left[\dot{x}, \dot{\varphi}, x, \varphi\right]=\left[0, 0, 0, 0\right]$ bude tedy vypadat:
@@ -240,4 +213,66 @@
 					y_4
 				\end{matrix}\right]
 			\end{align*}
+		\subsection{Dosazení konkrétních hodnot}
+			Nyní si můžeme zvolit konkrétní hodnoty našeho modelu. 
+			\begin{align*}
+				M &= \SI{15}{\kilo\gram}\\
+				m &= \SI{5}{\kilo\gram}\\
+				l &= \SI{1}{\meter}\\
+				g &= \SI{9,81}{\meter\square\second}\\
+			\end{align*}
+			Působící sílu můžeme měnit, abychom mohli ověřit chování v různých situacích.
+		\clearpage
+		\subsection{Grafy}
+			\begin{figure}[h]
+				\begin{center}
+					\includegraphics[scale=0.3]{Obrazky/Nel_model_f0_nul.eps}
+					\label{Nel_model_f0_nul}
+					\caption{Nelineární model při $f=\SI{0}{\newton}$ a nulových p.p.}
+				\end{center}
+				\begin{center}
+					\includegraphics[scale=0.3]{Obrazky/Lin_model_f0_nul.eps}
+					\label{Lin_model_f0_nul}
+					\caption{Lineární model při $f=\SI{0}{\newton}$ a nulových p.p.}
+				\end{center}
+			\end{figure}
+			\begin{figure}[h]
+				\begin{center}
+					\includegraphics[scale=0.33]{Obrazky/Nelin_model_f0_nenul.eps}
+					\label{Nel_model_f0_nenul}
+					\caption{Nelineární model při $f=\SI{0}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
+				\end{center}
+				\begin{center}
+					\includegraphics[scale=0.33]{Obrazky/Lin_model_f0_nenul.eps}
+					\label{Lin_model_f0_nenul}
+					\caption{Lineární model při $f=\SI{0}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
+				\end{center}
+			\end{figure}
+			\begin{figure}[h]
+				\begin{center}
+					\includegraphics[scale=0.33]{Obrazky/Nel_model_f10_nul.eps}
+					\label{Nel_model_f10_nul}
+					\caption{Nelineární model při $f=\SI{10}{\newton}$ a nulových p.p.}
+				\end{center}
+				\begin{center}
+					\includegraphics[scale=0.33]{Obrazky/Lin_model_f10_nul.eps}
+					\label{Lin_model_f10_nul}
+					\caption{Lineární model při $f=\SI{10}{\newton}$ a nulových p.p.}
+				\end{center}
+			\end{figure}
+			\begin{figure}[h]
+				\begin{center}
+					\includegraphics[scale=0.33]{Obrazky/Nel_model_f10_nenul.eps}
+					\label{Nel_model_f10_nenul}
+					\caption{Nelineární model při $f=\SI{10}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
+				\end{center}
+				\begin{center}
+					\includegraphics[scale=0.33]{Obrazky/Lin_model_f10_nenul.eps}
+					\label{Lin_model_f10_nenul}
+					\caption{Lineární model při $f=\SI{10}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
+				\end{center}
+			\end{figure}
+	\clearpage
+	\section{Návrh regulátoru}
+			
 \end{document}
