@@ -85,22 +85,22 @@
 			\end{align*}
 			Jako základ pro vzorec kinetické energie použijeme vzorec kinetické energie obyčejného matematického kyvadla $T = \frac{1}{2}mv^2$. Musíme ale uvažovat rychlost ve směru všech souřadnic ($x$, $u$, $v$).
 			\begin{align*}
-				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\dot{x}^2+\frac{1}{2}m\dot{u}^2+\frac{1}{2}m\dot{v}^2
+				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\dot{u}^2+\frac{1}{2}m\dot{v}^2
 			\end{align*}
 			Po dosazení souřadnic pro hmotný bod zavěšený na laně dostaneme kinetickou energii ve tvaru:
 			\begin{align*}
-				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m\dot{x}^2+\frac{1}{2}m\left(\dot{x}+l\dot{\varphi}\cos\varphi\right)^2+\frac{1}{2}m\left(l\dot{\varphi}\sin\varphi\right)^2
+				T &= \frac{1}{2}M\dot{x}^2+\frac{1}{2}m(l\dot{\varphi}\cos\varphi+\dot{x})^2+\frac{1}{2}m(l\dot{\varphi}\sin\varphi)^2
 			\end{align*}
 			Zjistíme si Lagrangián $L = T - V$:
 			\begin{align*}
-				L = \frac{1}{2}M\dot{x}+\frac{1}{2}m\dot{x}^2+\frac{1}{2}m\left(\dot{x}+l\dot{\varphi}\cos\varphi\right)^2+\frac{1}{2}m\left(l\dot{\varphi}\sin\varphi\right)^2+mgl\cos\varphi
+				L = \frac{1}{2}M\dot{x}^2+\frac{1}{2}ml^2\dot{\varphi}^2\cos^2\varphi+m\dot{x}l\dot{\varphi}\cos\varphi+\frac{1}{2}m\dot{x}^2+\frac{1}{2}ml^2\dot{\varphi}^2\sin^2\varphi+mgl\cos\varphi
 			\end{align*}
 			, který nyní budeme parciálně derivovat.
 			\begin{align*}
-				\frac{\partial L}{\partial\dot{x}} &= M\dot{x}+2m\dot{x}+ml\dot{\varphi}\cos\varphi\\
+				\frac{\partial L}{\partial\dot{x}} &= M\dot{x}+ml\dot{\varphi}\cos\varphi+m\dot{x}\\
 				\frac{\partial L}{\partial x} &= 0\\
-				\frac{\partial L}{\partial \dot{\varphi}} &= \dot{\varphi}l^2m\sin(\varphi)+\dot{x}lm\cos(\varphi)+\dot{\varphi}l^2m\cos^2(\varphi)\\
-				\frac{\partial L}{\partial \varphi} &= \dot{\varphi}^2l^2m\cos(\varphi)\sin(\varphi)-glm\sin(\varphi)-\dot{\varphi}\dot{x}lm\sin(\varphi)-\dot{\varphi}^2l^2m\sin(\varphi)\cos(\varphi)
+				\frac{\partial L}{\partial \dot{\varphi}} &= ml^2\dot{\varphi}+m\dot{x}l\cos\varphi\\
+				\frac{\partial L}{\partial \varphi} &= -m\dot{x}l\dot{\varphi}\sin\varphi-mgl\sin\varphi
 			\end{align*}
 			Vztahy pro hledané dvě rovnice vypadají následovně:
 			\begin{align*}
@@ -109,18 +109,19 @@
 			\end{align*}
 			, kde f je síla působící na vozík. Nyní můžeme dopočítat dvě rovnice modelu vozík-kyvadlo.
 			\begin{align*}
-				M\ddot{x}+2m\ddot{x}+\ddot{\varphi}lm\cos(\varphi)-\dot{\varphi}lm\sin(\varphi) = f\\
-				\ddot{\varphi}l^2m+\ddot{x}lm\cos(\varphi)-\dot{x}lm\sin(\varphi)+glm\sin(\varphi)+lm\dot{\varphi}\dot{x}\sin(\varphi)=0
+				M\dot{x}+ml\ddot{\varphi}\cos\varphi-ml\dot{\varphi}^2\sin\varphi+m\ddot{x} = f\\
+				ml\left(l\ddot{\varphi}+\ddot{x}\cos\varphi-\dot{x}\sin\varphi+\dot{x}\dot{\varphi}\sin\varphi+g\sin\varphi\right)=0
 			\end{align*}
 thr			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
-				\ddot{x} &= \frac{-\ddot{\varphi}lm\cos(\varphi)-\dot{\varphi}lmsin(\varphi)+f}{M+2m}\\
-				\ddot{\varphi} &= \frac{-\ddot{x}lm\cos(\varphi)+\dot{x}lm\sin(\varphi)-glm\sin(\varphi)-lm\dot{\varphi}\dot{x}\sin(\varphi)}{l^2m}
+				\ddot{x} &= \frac{-ml\ddot{\varphi}\cos\varphi+ml\dot{\varphi}^2\sin\varphi+f}{M+m}\\
+				\ddot{\varphi} &= \frac{\sin\varphi\left(\dot{x}\dot{\varphi}-\dot{\varphi}+g\right)+\ddot{x}\cos\varphi}{l}
 			\end{align*}
-			Vidíme, že rovnice na sobě závisí. Můžeme tedy jednu dosadit do druhé a opačně.
+			Vidíme, že rovnice na sobě závisí. Můžeme je tedy navzájem dosadit.
 			\begin{align*}
-				\ddot{x} = &\frac{f-\dot{\varphi}lm\sin(\varphi)-\dot{x}m\cos(\varphi)\sin(\varphi)+gm\cos(\varphi)\sin(\varphi)+\dot{\varphi}\dot{x}m\cos(\varphi)\sin(\varphi)}{M+2m-m\cos^2(\varphi)}\\
-				\ddot{\varphi} = &-\frac{f\cos(\varphi)-2\dot{x}m\sin(\varphi)+2gm\sin(\varphi)-M\dot{x}\sin(\varphi)+Mg\sin(\varphi)+M\dot{\varphi}\dot{x}\sin(\varphi)}{l(M+2m+m\cos^2(\varphi))}+\\&+\frac{2\dot{\varphi}\dot{x}m\sin(\varphi)-\dot{\varphi}lm\cos(\varphi)}{l(M+2m+m\cos^2(\varphi))}
+				\ddot{x} &= \frac{lm\sin\varphi\dot{\varphi}^2-\dot{x}m\cos\varphi\sin\varphi\dot{\varphi}+f+\dot{x}m\cos\varphi\sin\varphi-gm\cos\varphi\sin\varphi}{m\cos^2\varphi+M+m}\\
+				\ddot{\varphi} &= \frac{f\cos\varphi-\dot{x}m\sin\varphi+gm\sin\varphi-M\dot{x}\sin\varphi+Mg\sin\varphi+M\dot{\varphi}\dot{x}\sin\varphi+\dot{\varphi}\dot{x}m\sin\varphi}{l\left(m\cos^2\varphi+M+m\right)}\\
+				&+ \frac{\dot{\varphi}^2lm\cos\varphi\sin\varphi}{l\left(m\cos^2\varphi+M+m\right)}
 			\end{align*}
 		\subsection{Stavový popis zjednodušeného modelu}
 			Zavedeme si stavové proměnné
@@ -161,22 +162,23 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
 				f_1: \dot{y_1} = &y_3\\
 				f_2: \dot{y_2} = &y_4\\
-				f_3: \dot{y_3} = &\frac{f-\dot{\varphi}lm\sin(\varphi)-\dot{x}m\cos(\varphi)\sin(\varphi)+gm\cos(\varphi)\sin(\varphi)+\dot{\varphi}\dot{x}m\cos(\varphi)\sin(\varphi)}{M+2m-m\cos^2(\varphi)}\\
-				f_4: \dot{y_4} = &-\frac{f\cos(\varphi)-2\dot{x}m\sin(\varphi)+2gm\sin(\varphi)-M\dot{x}\sin(\varphi)+Mg\sin(\varphi)+M\dot{\varphi}\dot{x}\sin(\varphi)}{l(M+2m+m\cos^2(\varphi))}+\\&+\frac{2\dot{\varphi}\dot{x}m\sin(\varphi)-\dot{\varphi}lm\cos(\varphi)}{l(M+2m+m\cos^2(\varphi))}
+				f_3: \dot{y_3} = & \frac{lm\sin(y_2)y_4^2-y_3m\cos(y_2)\sin(y_2)y_4+u+y_3m\cos(y_2)\sin(y_2)-gm\cos(y_2)\sin(y_2)}{m\cos^2(y_2)+M+m}\\
+				f_4: \dot{y_4} = &\frac{u\cos(y_2)-y_3m\sin(y_2)+gm\sin(y_2)-My_3\sin(y_2)+Mg\sin(y_2)+My_4y_3\sin(y_2)}{l\left(m\cos^2(y_2)+M+m\right)}\\
+				&+ \frac{y_4y_3m\sin(y_2)+y_4^2lm\cos(y_2)\sin(y_2)}{l\left(m\cos^2(y_2)+M+m\right)}
 			\end{align*}
-			Po zderivování můžeme linearizovat. To chceme udělat okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = 0$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, takže tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
+			Po zderivování můžeme linearizovat. To chceme udělat okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = \pi$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, takže tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
 			\begin{align*}
 				\mathbf{A} &= \left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & \frac{gm}{M+m} & 0 & 0\\
-					0 & -\frac{mg+Mg}{l\left(M+3m\right)} & 0 & 0
+					0 & -\frac{gm}{M+2m} & 0 & 0\\
+					0 & -\frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
 				\end{matrix}\right]\\
 				\mathbf{B} &= \left[\begin{matrix}
 					0\\
 					0\\
-					\frac{1}{M+m}\\
-					\frac{-1}{l\left(M+3m\right)}
+					\frac{1}{M+2m}\\
+					-\frac{1}{l\left(M+2m\right)}
 				\end{matrix}\right]
 			\end{align*}
 			Výsledný stavový popis v okolí pracovního bodu $\left[\dot{x}, \dot{\varphi}, x, \varphi\right]=\left[0, 0, 0, 0\right]$ bude tedy vypadat:
@@ -184,7 +186,7 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 				\dot{x}&=\left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & \frac{-gm}{M+2m} & 0 & 0\\
+					0 & -\frac{gm}{M+2m} & 0 & 0\\
 					0 & \frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
 				\end{matrix}\right]
 				\left[\begin{matrix}
@@ -198,7 +200,7 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 					0\\
 					0\\
 					\frac{1}{M+2m}\\
-					\frac{1}{l\left(M+2m\right)}
+					-\frac{1}{l\left(M+2m\right)}
 				\end{matrix}\right]u\\
 				y&=\left[\begin{matrix}
 					1 & 0 & 0 & 0\\

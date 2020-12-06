@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  12 NOV 2020 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  6 DEC 2020 12:08
 entering extended mode
 **"./Projekt 5 - zpráva.tex"
 ("Projekt 5 - zpráva.tex"
@@ -720,17 +720,17 @@ pdf>
 (epstopdf)                    size: 8391 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nel_model_f0_nul-ep
 s-converted-to.pdf Obrazky/Nel_model_f0_nul.eps>
-(epstopdf)             \includegraphics on input line 229.
+(epstopdf)             \includegraphics on input line 231.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nel_model_f0_nul-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Nel_model_f0_nul-eps-converted-to.pdf, id=88, 1445.4pt x 724.7075pt>
+<Obrazky/Nel_model_f0_nul-eps-converted-to.pdf, id=87, 1445.4pt x 724.7075pt>
 File: Obrazky/Nel_model_f0_nul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Nel_model_f0_nul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Nel_model_f0_nul-eps-converted-to.pdf  used on
- input line 229.
+ input line 231.
 (pdftex.def)             Requested size: 433.62335pt x 217.41393pt.
 Package epstopdf Info: Source file: <Obrazky/Lin_model_f0_nul.eps>
 (epstopdf)                    date: 2020-11-12 10:23:03
@@ -741,155 +741,191 @@ pdf>
 (epstopdf)                    size: 8394 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f0_nul-ep
 s-converted-to.pdf Obrazky/Lin_model_f0_nul.eps>
-(epstopdf)             \includegraphics on input line 234.
+(epstopdf)             \includegraphics on input line 236.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f0_nul-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Lin_model_f0_nul-eps-converted-to.pdf, id=89, 1445.4pt x 724.7075pt>
+<Obrazky/Lin_model_f0_nul-eps-converted-to.pdf, id=88, 1445.4pt x 724.7075pt>
 File: Obrazky/Lin_model_f0_nul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Lin_model_f0_nul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Lin_model_f0_nul-eps-converted-to.pdf  used on
- input line 234.
+ input line 236.
 (pdftex.def)             Requested size: 433.62335pt x 217.41393pt.
 Package epstopdf Info: Source file: <Obrazky/Nelin_model_f0_nenul.eps>
-(epstopdf)                    date: 2020-11-12 09:52:10
-(epstopdf)                    size: 187943 bytes
+(epstopdf)                    date: 2020-12-06 12:05:38
+(epstopdf)                    size: 410256 bytes
 (epstopdf)             Output file: <Obrazky/Nelin_model_f0_nenul-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2020-11-12 10:05:06
 (epstopdf)                    size: 58069 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nelin_model_f0_nenu
 l-eps-converted-to.pdf Obrazky/Nelin_model_f0_nenul.eps>
-(epstopdf)             \includegraphics on input line 241.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 243.
+runsystem(epstopdf --outfile=Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf 
+Obrazky/Nelin_model_f0_nenul.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Obrazky/Nelin_model_f0_nenul-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2020-12-06 12:08:36
+(epstopdf)                    size: 142501 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nelin_model_f0_nenul-eps-converted-to.
 pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf, id=90, 1445.4pt x 724.7075p
+<Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf, id=89, 1445.4pt x 724.7075p
 t>
 File: Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf  use
-d on input line 241.
+d on input line 243.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 Package epstopdf Info: Source file: <Obrazky/Lin_model_f0_nenul.eps>
-(epstopdf)                    date: 2020-11-12 09:44:53
-(epstopdf)                    size: 189097 bytes
+(epstopdf)                    date: 2020-12-06 12:05:10
+(epstopdf)                    size: 407983 bytes
 (epstopdf)             Output file: <Obrazky/Lin_model_f0_nenul-eps-converted-t
 o.pdf>
 (epstopdf)                    date: 2020-11-12 10:06:16
 (epstopdf)                    size: 67159 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f0_nenul-
 eps-converted-to.pdf Obrazky/Lin_model_f0_nenul.eps>
-(epstopdf)             \includegraphics on input line 246.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 248.
+runsystem(epstopdf --outfile=Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf Ob
+razky/Lin_model_f0_nenul.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Obrazky/Lin_model_f0_nenul-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2020-12-06 12:08:39
+(epstopdf)                    size: 142836 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f0_nenul-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf, id=91, 1445.4pt x 724.7075pt>
+<Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf, id=90, 1445.4pt x 724.7075pt>
 
 File: Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf  used 
-on input line 246.
+on input line 248.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: <Obrazky/Nel_model_f10_nul.eps>
-(epstopdf)                    date: 2020-11-12 10:09:42
-(epstopdf)                    size: 189566 bytes
+(epstopdf)                    date: 2020-12-06 12:07:17
+(epstopdf)                    size: 401926 bytes
 (epstopdf)             Output file: <Obrazky/Nel_model_f10_nul-eps-converted-to
 .pdf>
 (epstopdf)                    date: 2020-11-12 10:13:39
 (epstopdf)                    size: 63735 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nel_model_f10_nul-e
 ps-converted-to.pdf Obrazky/Nel_model_f10_nul.eps>
-(epstopdf)             \includegraphics on input line 253.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 255.
+runsystem(epstopdf --outfile=Obrazky/Nel_model_f10_nul-eps-converted-to.pdf Obr
+azky/Nel_model_f10_nul.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Obrazky/Nel_model_f10_nul-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2020-12-06 12:08:41
+(epstopdf)                    size: 109689 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nel_model_f10_nul-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Nel_model_f10_nul-eps-converted-to.pdf, id=92, 1445.4pt x 724.7075pt>
+<Obrazky/Nel_model_f10_nul-eps-converted-to.pdf, id=91, 1445.4pt x 724.7075pt>
 File: Obrazky/Nel_model_f10_nul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Nel_model_f10_nul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Nel_model_f10_nul-eps-converted-to.pdf  used o
-n input line 253.
+n input line 255.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 Package epstopdf Info: Source file: <Obrazky/Lin_model_f10_nul.eps>
-(epstopdf)                    date: 2020-11-12 10:10:17
-(epstopdf)                    size: 191439 bytes
+(epstopdf)                    date: 2020-12-06 12:06:50
+(epstopdf)                    size: 409630 bytes
 (epstopdf)             Output file: <Obrazky/Lin_model_f10_nul-eps-converted-to
 .pdf>
 (epstopdf)                    date: 2020-11-12 10:13:51
 (epstopdf)                    size: 65804 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f10_nul-e
 ps-converted-to.pdf Obrazky/Lin_model_f10_nul.eps>
-(epstopdf)             \includegraphics on input line 258.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 260.
+runsystem(epstopdf --outfile=Obrazky/Lin_model_f10_nul-eps-converted-to.pdf Obr
+azky/Lin_model_f10_nul.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Obrazky/Lin_model_f10_nul-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2020-12-06 12:08:44
+(epstopdf)                    size: 137720 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f10_nul-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Lin_model_f10_nul-eps-converted-to.pdf, id=93, 1445.4pt x 724.7075pt>
+<Obrazky/Lin_model_f10_nul-eps-converted-to.pdf, id=92, 1445.4pt x 724.7075pt>
 File: Obrazky/Lin_model_f10_nul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Lin_model_f10_nul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Lin_model_f10_nul-eps-converted-to.pdf  used o
-n input line 258.
+n input line 260.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: <Obrazky/Nel_model_f10_nenul.eps>
-(epstopdf)                    date: 2020-11-12 10:08:35
-(epstopdf)                    size: 190455 bytes
+(epstopdf)                    date: 2020-12-06 12:08:13
+(epstopdf)                    size: 409873 bytes
 (epstopdf)             Output file: <Obrazky/Nel_model_f10_nenul-eps-converted-
 to.pdf>
 (epstopdf)                    date: 2020-11-12 10:14:03
 (epstopdf)                    size: 63291 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nel_model_f10_nenul
 -eps-converted-to.pdf Obrazky/Nel_model_f10_nenul.eps>
-(epstopdf)             \includegraphics on input line 265.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 267.
+runsystem(epstopdf --outfile=Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf O
+brazky/Nel_model_f10_nenul.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Obrazky/Nel_model_f10_nenul-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2020-12-06 12:08:47
+(epstopdf)                    size: 133528 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nel_model_f10_nenul-eps-converted-to.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf, id=94, 1445.4pt x 724.7075pt
+<Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf, id=93, 1445.4pt x 724.7075pt
 >
 File: Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf  used
- on input line 265.
+ on input line 267.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 Package epstopdf Info: Source file: <Obrazky/Lin_model_f10_nenul.eps>
-(epstopdf)                    date: 2020-11-12 10:08:04
-(epstopdf)                    size: 190668 bytes
+(epstopdf)                    date: 2020-12-06 12:07:53
+(epstopdf)                    size: 409577 bytes
 (epstopdf)             Output file: <Obrazky/Lin_model_f10_nenul-eps-converted-
 to.pdf>
 (epstopdf)                    date: 2020-11-12 10:14:10
 (epstopdf)                    size: 65588 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f10_nenul
 -eps-converted-to.pdf Obrazky/Lin_model_f10_nenul.eps>
-(epstopdf)             \includegraphics on input line 270.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 272.
+runsystem(epstopdf --outfile=Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf O
+brazky/Lin_model_f10_nenul.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Obrazky/Lin_model_f10_nenul-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2020-12-06 12:08:50
+(epstopdf)                    size: 138031 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f10_nenul-eps-converted-to.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf, id=95, 1445.4pt x 724.7075pt
+<Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf, id=94, 1445.4pt x 724.7075pt
 >
 File: Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf  used
- on input line 270.
+ on input line 272.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -928,9 +964,9 @@ es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
 /type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy8.pfb>
-Output written on "Projekt 5 - zpráva.pdf" (12 pages, 1981314 bytes).
+Output written on "Projekt 5 - zpráva.pdf" (12 pages, 2401051 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
+ 392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
