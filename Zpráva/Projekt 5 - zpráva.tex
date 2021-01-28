@@ -276,5 +276,34 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 			\end{figure}
 	\clearpage
 	\section{Návrh regulátoru}
-			
+		Jako nejideálnější regulátor jsme zvolili regulátor stavový. Cílem bylo ustabilizovat systém, tzn. dostat póly systému na mezi stability (obr. \ref{GMK_na_mezi}) do záporné poloroviny a tím systém učinit stabilním.	
+		\begin{figure}[h]
+			\begin{center}
+				\includegraphics[scale=0.33]{Obrazky/GMK_na_mezi.eps}
+				\label{GMK_na_mezi}
+				\caption{GMK systému na mezi stability}
+			\end{center}
+		\end{figure}
+		\\Nejprve je potřeba si zvolit požadované póly. V našem případě máme čtyři póly s nulovou reálnou částí (to způsobuje kmitání systému, který je díky tomu na mezi stability). Musíme tak zvolit póly, které mají zápornou reálnou část. Nyní můžeme vypočítat vektor zesílení $K$. Toho dosáhneme např. v Matlabu pomocí funkce $\texttt{K = acker(A, B, p)}$, kde \texttt{A} je matice systému, \texttt{B} je matice řízení a \texttt{p} je vektor požadovaných pólů. Po získání vektoru zesílení je možno vytvořit uzavřenou zpětnou vazbu systému ve stavovém popisu podle vzorce:
+		\begin{align*}
+			A_u &= A-B*K\\
+			B_u &= B\\
+			C_u &= C\\
+			D_u &= D
+		\end{align*}
+		\\Můžeme tedy vyzkoušet, jak se bude nově vzniklý systém chovat při nulových počátečních podmínkách (obr. \ref{Stav_reg_f0_nul}) a nenulových počátečních podmínkách (obr. \ref{Stav_reg_f0_nenul}).
+		\begin{figure}[h]
+			\begin{center}
+				\includegraphics[scale=0.33]{Obrazky/Stav_reg_f0_nul.eps}
+				\label{Stav_reg_f0_nul}
+				\caption{Lineární model se stav. reg. při p.p. $\varphi = \SI{0}{\degree}$}
+			\end{center}
+			\begin{center}
+				\includegraphics[scale=0.33]{Obrazky/Stav_reg_f0_nenul.eps}
+				\label{Stav_reg_f0_nenul}
+				\caption{Lineární model se stav. reg. při p.p. $\varphi = \SI{0}{\degree}$}
+			\end{center}
+		\end{figure}
+		\\Z obou obrázků je vidět, že systém je stabilní.
+		
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  6 DEC 2020 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  28 JAN 2021 11:33
 entering extended mode
 **"./Projekt 5 - zpráva.tex"
 ("Projekt 5 - zpráva.tex"
@@ -758,18 +758,12 @@ Package epstopdf Info: Source file: <Obrazky/Nelin_model_f0_nenul.eps>
 (epstopdf)                    size: 410256 bytes
 (epstopdf)             Output file: <Obrazky/Nelin_model_f0_nenul-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2020-11-12 10:05:06
-(epstopdf)                    size: 58069 bytes
+(epstopdf)                    date: 2020-12-06 12:08:36
+(epstopdf)                    size: 142501 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nelin_model_f0_nenu
 l-eps-converted-to.pdf Obrazky/Nelin_model_f0_nenul.eps>
 (epstopdf)             \includegraphics on input line 243.
-runsystem(epstopdf --outfile=Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf 
-Obrazky/Nelin_model_f0_nenul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Nelin_model_f0_nenul-eps-converted
--to.pdf>
-(epstopdf)                    date: 2020-12-06 12:08:36
-(epstopdf)                    size: 142501 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nelin_model_f0_nenul-eps-converted-to.
@@ -788,18 +782,12 @@ Package epstopdf Info: Source file: <Obrazky/Lin_model_f0_nenul.eps>
 (epstopdf)                    size: 407983 bytes
 (epstopdf)             Output file: <Obrazky/Lin_model_f0_nenul-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2020-11-12 10:06:16
-(epstopdf)                    size: 67159 bytes
+(epstopdf)                    date: 2020-12-06 12:08:39
+(epstopdf)                    size: 142836 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f0_nenul-
 eps-converted-to.pdf Obrazky/Lin_model_f0_nenul.eps>
 (epstopdf)             \includegraphics on input line 248.
-runsystem(epstopdf --outfile=Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf Ob
-razky/Lin_model_f0_nenul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Lin_model_f0_nenul-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2020-12-06 12:08:39
-(epstopdf)                    size: 142836 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f0_nenul-eps-converted-to.pd
@@ -819,18 +807,12 @@ Package epstopdf Info: Source file: <Obrazky/Nel_model_f10_nul.eps>
 (epstopdf)                    size: 401926 bytes
 (epstopdf)             Output file: <Obrazky/Nel_model_f10_nul-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2020-11-12 10:13:39
-(epstopdf)                    size: 63735 bytes
+(epstopdf)                    date: 2020-12-06 12:08:41
+(epstopdf)                    size: 109689 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nel_model_f10_nul-e
 ps-converted-to.pdf Obrazky/Nel_model_f10_nul.eps>
 (epstopdf)             \includegraphics on input line 255.
-runsystem(epstopdf --outfile=Obrazky/Nel_model_f10_nul-eps-converted-to.pdf Obr
-azky/Nel_model_f10_nul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Nel_model_f10_nul-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2020-12-06 12:08:41
-(epstopdf)                    size: 109689 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nel_model_f10_nul-eps-converted-to.pdf
@@ -846,18 +828,12 @@ Package epstopdf Info: Source file: <Obrazky/Lin_model_f10_nul.eps>
 (epstopdf)                    size: 409630 bytes
 (epstopdf)             Output file: <Obrazky/Lin_model_f10_nul-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2020-11-12 10:13:51
-(epstopdf)                    size: 65804 bytes
+(epstopdf)                    date: 2020-12-06 12:08:44
+(epstopdf)                    size: 137720 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f10_nul-e
 ps-converted-to.pdf Obrazky/Lin_model_f10_nul.eps>
 (epstopdf)             \includegraphics on input line 260.
-runsystem(epstopdf --outfile=Obrazky/Lin_model_f10_nul-eps-converted-to.pdf Obr
-azky/Lin_model_f10_nul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Lin_model_f10_nul-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2020-12-06 12:08:44
-(epstopdf)                    size: 137720 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f10_nul-eps-converted-to.pdf
@@ -876,18 +852,12 @@ Package epstopdf Info: Source file: <Obrazky/Nel_model_f10_nenul.eps>
 (epstopdf)                    size: 409873 bytes
 (epstopdf)             Output file: <Obrazky/Nel_model_f10_nenul-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2020-11-12 10:14:03
-(epstopdf)                    size: 63291 bytes
+(epstopdf)                    date: 2020-12-06 12:08:47
+(epstopdf)                    size: 133528 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Nel_model_f10_nenul
 -eps-converted-to.pdf Obrazky/Nel_model_f10_nenul.eps>
 (epstopdf)             \includegraphics on input line 267.
-runsystem(epstopdf --outfile=Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf O
-brazky/Nel_model_f10_nenul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Nel_model_f10_nenul-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2020-12-06 12:08:47
-(epstopdf)                    size: 133528 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Nel_model_f10_nenul-eps-converted-to.p
@@ -904,18 +874,12 @@ Package epstopdf Info: Source file: <Obrazky/Lin_model_f10_nenul.eps>
 (epstopdf)                    size: 409577 bytes
 (epstopdf)             Output file: <Obrazky/Lin_model_f10_nenul-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2020-11-12 10:14:10
-(epstopdf)                    size: 65588 bytes
+(epstopdf)                    date: 2020-12-06 12:08:50
+(epstopdf)                    size: 138031 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Lin_model_f10_nenul
 -eps-converted-to.pdf Obrazky/Lin_model_f10_nenul.eps>
 (epstopdf)             \includegraphics on input line 272.
-runsystem(epstopdf --outfile=Obrazky/Lin_model_f10_nenul-eps-converted-to.pdf O
-brazky/Lin_model_f10_nenul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Lin_model_f10_nenul-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2020-12-06 12:08:50
-(epstopdf)                    size: 138031 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Lin_model_f10_nenul-eps-converted-to.p
@@ -937,36 +901,111 @@ eps-converted-to.pdf>] [8 <./Obrazky/Nelin_model_f0_nenul-eps-converted-to.pdf>
  <./Obrazky/Lin_model_f0_nenul-eps-converted-to.pdf>] [9 <./Obrazky/Nel_model_f
 10_nul-eps-converted-to.pdf> <./Obrazky/Lin_model_f10_nul-eps-converted-to.pdf>
 ] [10 <./Obrazky/Nel_model_f10_nenul-eps-converted-to.pdf> <./Obrazky/Lin_model
-_f10_nenul-eps-converted-to.pdf>] [11
+_f10_nenul-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Obrazky/GMK_na_mezi.eps>
+(epstopdf)                    date: 2021-01-28 11:09:46
+(epstopdf)                    size: 50954 bytes
+(epstopdf)             Output file: <Obrazky/GMK_na_mezi-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-01-28 11:11:22
+(epstopdf)                    size: 54844 bytes
+(epstopdf)             Command: <epstopdf --outfile=Obrazky/GMK_na_mezi-eps-con
+verted-to.pdf Obrazky/GMK_na_mezi.eps>
+(epstopdf)             \includegraphics on input line 282.
+Package epstopdf Info: Output file is already uptodate.
 
-] ("Projekt 5 - zpráva.aux") ) 
+
+pdfTeX warning: pdflatex (file ./Obrazky/GMK_na_mezi-eps-converted-to.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Obrazky/GMK_na_mezi-eps-converted-to.pdf, id=156, 1445.4pt x 724.7075pt>
+File: Obrazky/GMK_na_mezi-eps-converted-to.pdf Graphic file (type pdf)
+<use Obrazky/GMK_na_mezi-eps-converted-to.pdf>
+Package pdftex.def Info: Obrazky/GMK_na_mezi-eps-converted-to.pdf  used on inpu
+t line 282.
+(pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 287.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package epstopdf Info: Source file: <Obrazky/Stav_reg_f0_nul.eps>
+(epstopdf)                    date: 2021-01-28 11:29:21
+(epstopdf)                    size: 332726 bytes
+(epstopdf)             Output file: <Obrazky/Stav_reg_f0_nul-eps-converted-to.p
+df>
+(epstopdf)                    date: 2021-01-28 11:32:30
+(epstopdf)                    size: 8395 bytes
+(epstopdf)             Command: <epstopdf --outfile=Obrazky/Stav_reg_f0_nul-eps
+-converted-to.pdf Obrazky/Stav_reg_f0_nul.eps>
+(epstopdf)             \includegraphics on input line 297.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf, id=157, 1445.4pt x 724.7075pt>
+File: Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf Graphic file (type pdf)
+<use Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf>
+Package pdftex.def Info: Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf  used on 
+input line 297.
+(pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
+Package epstopdf Info: Source file: <Obrazky/Stav_reg_f0_nenul.eps>
+(epstopdf)                    date: 2021-01-28 11:28:21
+(epstopdf)                    size: 388034 bytes
+(epstopdf)             Output file: <Obrazky/Stav_reg_f0_nenul-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2021-01-28 11:32:33
+(epstopdf)                    size: 82712 bytes
+(epstopdf)             Command: <epstopdf --outfile=Obrazky/Stav_reg_f0_nenul-e
+ps-converted-to.pdf Obrazky/Stav_reg_f0_nenul.eps>
+(epstopdf)             \includegraphics on input line 302.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf
+): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf, id=158, 1445.4pt x 724.7075pt>
+
+File: Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf Graphic file (type pdf)
+<use Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf>
+Package pdftex.def Info: Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf  used o
+n input line 302.
+(pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11
+
+ <./Obrazky/GMK_na_mezi-eps-converted-to.pdf>] [12 <./Obrazky/Stav_reg_f0_nul-e
+ps-converted-to.pdf> <./Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf>]
+("Projekt 5 - zpráva.aux") ) 
 Here is how much of TeX's memory you used:
- 17532 strings out of 492895
- 335405 string characters out of 3133476
- 388726 words of memory out of 3000000
- 21258 multiletter control sequences out of 15000+200000
- 553611 words of font info for 91 fonts, out of 3000000 for 9000
+ 17571 strings out of 492895
+ 336779 string characters out of 3133476
+ 388753 words of memory out of 3000000
+ 21289 multiletter control sequences out of 15000+200000
+ 554550 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,19n,61p,437b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Jiří\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Jiří\AppData\
-Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Jiř
-í\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:
-\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
-440.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb>
-Output written on "Projekt 5 - zpráva.pdf" (12 pages, 2401051 bytes).
+ 41i,19n,61p,781b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/p
+k/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\
+2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Jiří\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Jiří
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\U
+sers\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx172
+8.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecrm1440.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb>
+Output written on "Projekt 5 - zpráva.pdf" (13 pages, 2549307 bytes).
 PDF statistics:
- 392 PDF objects out of 1000 (max. 8388607)
+ 433 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
