@@ -203,25 +203,25 @@ figure;
 subplot(4,1,1)
 plot(out.lin_x);
 legend('x')
-title('Linearizovany model - Poloha vozíku')
+title('Linearizovany model se stav. reg. - Poloha vozíku')
 xlabel('t [s]')
 ylabel('s [m]')
 subplot(4,1,2)
 plot(out.lin_phi);
 legend('\phi')
-title('Linearizovany model - Uhel kyvadla \phi')
+title('Linearizovany model se stav. reg. - Uhel kyvadla \phi')
 xlabel('t [s]')
 ylabel('\phi [°]')
 subplot(4,1,3)
 plot(out.lin_dx);
 legend('dx')
-title('Linearizovany model - Rychlost voziku')
+title('Linearizovany model se stav. reg. - Rychlost voziku')
 xlabel('t [s]')
 ylabel('v [m/s]')
 subplot(4,1,4)
 plot(out.lin_dphi);
 legend('d\phi')
-title('Linearizovany model - Uhlova rychlost kyvadla')
+title('Linearizovany model se stav. reg. - Uhlova rychlost kyvadla')
 xlabel('t [s]')
 ylabel('\omega [rad/s]')
 
@@ -255,24 +255,24 @@ figure;
 subplot(4,1,1)
 plot(out.stav_x);
 legend('x')
-title('Linearni model se stav. reg. - Poloha vozíku')
+title('Linearni model - Poloha vozíku')
 xlabel('t [s]')
 ylabel('s [m]')
 subplot(4,1,2)
 plot(out.stav_phi);
 legend('\phi')
-title('Linearni model se stav. reg. - Uhel kyvadla \phi')
+title('Linearni model - Uhel kyvadla \phi')
 xlabel('t [s]')
 ylabel('\phi [°]')
 subplot(4,1,3)
 plot(out.stav_dx);
 legend('dx')
-title('Linearni model se stav. reg. - Rychlost voziku')
+title('Linearni model - Rychlost voziku')
 xlabel('t [s]')
 ylabel('v [m/s]')
 subplot(4,1,4)
 plot(out.stav_dphi);
 legend('d\phi')
-title('Linearni model se stav. reg. - Uhlova rychlost kyvadla')
+title('Linearni model - Uhlova rychlost kyvadla')
 xlabel('t [s]')
 ylabel('\omega [rad/s]')
