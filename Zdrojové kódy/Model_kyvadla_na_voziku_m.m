@@ -157,7 +157,7 @@ m = 5; %hmotnost tělesa na lane
 dx = 0; %pocatecni rychlost voziku
 x = 0; %pocatecni poloh voziku
 dphi = 0; %pocatecni rychlost kyvadla
-phi = 0*pi/180; %pocatecni poloha kyvadla ve °
+phi = 5*pi/180; %pocatecni poloha kyvadla ve °
 l = 1; %delka zavesu
 g = 9.81; %gravitacni sila
 

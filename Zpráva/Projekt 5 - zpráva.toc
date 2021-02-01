@@ -6,3 +6,5 @@
 \contentsline {subsection}{\numberline {2.3}Dosazen\IeC {\'\i } konkr\IeC {\'e}tn\IeC {\'\i }ch hodnot}{6}% 
 \contentsline {subsection}{\numberline {2.4}Grafy}{7}% 
 \contentsline {section}{\numberline {3}N\IeC {\'a}vrh regul\IeC {\'a}toru}{11}% 
+\contentsline {section}{\numberline {4}Implementace regul\IeC {\'a}toru}{11}% 
+\contentsline {section}{\numberline {5}Z\IeC {\'a}v\IeC {\v e}r}{13}% 

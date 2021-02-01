@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  28 JAN 2021 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  1 FEB 2021 11:57
 entering extended mode
 **"./Projekt 5 - zpráva.tex"
 ("Projekt 5 - zpráva.tex"
@@ -936,7 +936,7 @@ df>
 (epstopdf)                    size: 8395 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Stav_reg_f0_nul-eps
 -converted-to.pdf Obrazky/Stav_reg_f0_nul.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 292.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -946,7 +946,7 @@ pdfTeX warning: pdflatex (file ./Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf):
 File: Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Stav_reg_f0_nul-eps-converted-to.pdf  used on 
-input line 297.
+input line 292.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 Package epstopdf Info: Source file: <Obrazky/Stav_reg_f0_nenul.eps>
 (epstopdf)                    date: 2021-01-28 11:28:21
@@ -957,7 +957,7 @@ Package epstopdf Info: Source file: <Obrazky/Stav_reg_f0_nenul.eps>
 (epstopdf)                    size: 82712 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Stav_reg_f0_nenul-e
 ps-converted-to.pdf Obrazky/Stav_reg_f0_nenul.eps>
-(epstopdf)             \includegraphics on input line 302.
+(epstopdf)             \includegraphics on input line 297.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -968,7 +968,7 @@ pdfTeX warning: pdflatex (file ./Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf
 File: Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf Graphic file (type pdf)
 <use Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf>
 Package pdftex.def Info: Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf  used o
-n input line 302.
+n input line 297.
 (pdftex.def)             Requested size: 476.98347pt x 239.1542pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -977,7 +977,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  <./Obrazky/GMK_na_mezi-eps-converted-to.pdf>] [12 <./Obrazky/Stav_reg_f0_nul-e
 ps-converted-to.pdf> <./Obrazky/Stav_reg_f0_nenul-eps-converted-to.pdf>]
-("Projekt 5 - zpráva.aux") ) 
+[13
+
+] ("Projekt 5 - zpráva.aux") ) 
 Here is how much of TeX's memory you used:
  17571 strings out of 492895
  336779 string characters out of 3133476
@@ -985,27 +987,27 @@ Here is how much of TeX's memory you used:
  21289 multiletter control sequences out of 15000+200000
  554550 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,19n,61p,781b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/p
-k/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\
-2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Jiří\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Jiří
-\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\U
-sers\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx172
-8.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
-600\ecrm1440.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb>
-Output written on "Projekt 5 - zpráva.pdf" (13 pages, 2549307 bytes).
+ 41i,19n,61p,659b,1027s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts
+/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Jiří\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Jiří\AppData\
+Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Jiř
+í\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:
+\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1
+728.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecrm1440.pk> <C:\Users\Jiří\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jk
+nappen/ec/dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb>
+Output written on "Projekt 5 - zpráva.pdf" (14 pages, 2553488 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
+ 448 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
