@@ -115,13 +115,13 @@
 thr			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
 				\ddot{x} &= \frac{-ml\ddot{\varphi}\cos\varphi+ml\dot{\varphi}^2\sin\varphi+f}{M+m}\\
-				\ddot{\varphi} &= \frac{\sin\varphi\left(\dot{x}\dot{\varphi}-\dot{\varphi}+g\right)+\ddot{x}\cos\varphi}{l}
+				\ddot{\varphi} &= \frac{\sin\varphi\left(-\dot{x}\dot{\varphi}+\dot{x}-g\right)-\ddot{x}\cos\varphi}{l}
 			\end{align*}
 			Vidíme, že rovnice na sobě závisí. Můžeme je tedy navzájem dosadit.
 			\begin{align*}
-				\ddot{x} &= \frac{lm\sin\varphi\dot{\varphi}^2-\dot{x}m\cos\varphi\sin\varphi\dot{\varphi}+f+\dot{x}m\cos\varphi\sin\varphi-gm\cos\varphi\sin\varphi}{m\cos^2\varphi+M+m}\\
-				\ddot{\varphi} &= \frac{f\cos\varphi-\dot{x}m\sin\varphi+gm\sin\varphi-M\dot{x}\sin\varphi+Mg\sin\varphi+M\dot{\varphi}\dot{x}\sin\varphi+\dot{\varphi}\dot{x}m\sin\varphi}{l\left(m\cos^2\varphi+M+m\right)}\\
-				&+ \frac{\dot{\varphi}^2lm\cos\varphi\sin\varphi}{l\left(m\cos^2\varphi+M+m\right)}
+				\ddot{x} &= \frac{lm\sin\varphi\dot{\varphi}^2+\dot{x}m\cos\varphi\sin\varphi\dot{\varphi}+f-\dot{x}m\cos\varphi\sin\varphi+gm\cos\varphi\sin\varphi}{-m\cos^2\varphi+M+m}\\
+				\ddot{\varphi} &= \frac{-f\cos\varphi+\dot{x}m\sin\varphi-gm\sin\varphi+M\dot{x}\sin\varphi-Mg\sin\varphi-M\dot{\varphi}\dot{x}\sin\varphi-\dot{\varphi}\dot{x}m\sin\varphi}{l\left(-m\cos^2\varphi+M+m\right)}\\
+				&- \frac{\dot{\varphi}^2lm\cos\varphi\sin\varphi}{l\left(-m\cos^2\varphi+M+m\right)}
 			\end{align*}
 		\subsection{Stavový popis zjednodušeného modelu}
 			Zavedeme si stavové proměnné
@@ -162,23 +162,23 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 			\begin{align*}
 				f_1: \dot{y_1} = &y_3\\
 				f_2: \dot{y_2} = &y_4\\
-				f_3: \dot{y_3} = & \frac{lm\sin(y_2)y_4^2-y_3m\cos(y_2)\sin(y_2)y_4+u+y_3m\cos(y_2)\sin(y_2)-gm\cos(y_2)\sin(y_2)}{m\cos^2(y_2)+M+m}\\
-				f_4: \dot{y_4} = &\frac{u\cos(y_2)-y_3m\sin(y_2)+gm\sin(y_2)-My_3\sin(y_2)+Mg\sin(y_2)+My_4y_3\sin(y_2)}{l\left(m\cos^2(y_2)+M+m\right)}\\
-				&+ \frac{y_4y_3m\sin(y_2)+y_4^2lm\cos(y_2)\sin(y_2)}{l\left(m\cos^2(y_2)+M+m\right)}
+				f_3: \dot{y_3} = &\frac{lm\sin(y_2)y_4^2+y_3m\cos(y_2)\sin(y_2)y_4+f-y_3m\cos(y_2)\sin(y_2)+gm\cos(y_2)\sin(y_2)}{-m\cos^2(y_2)+M+m}\\
+				f_4: \dot{y_4} = &\frac{-f\cos(y_2)+y_3m\sin(y_2)-gm\sin(y_2)+My_3\sin(y_2)-Mg\sin(y_2)-My_4y_3\sin(y_2)}{l\left(-m\cos^2(y_2)+M+m\right)}\\
+				&- \frac{y_4^2lm\cos(y_2)\sin(y_2)+y_4y_3m\sin(y_2)}{l\left(-m\cos^2(y_2)+M+m\right)}
 			\end{align*}
-			Po zderivování můžeme linearizovat. To chceme udělat okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = \pi$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, takže tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
+			Po zderivování můžeme linearizovat. To chceme udělat okolo rovnovážného bodu, tj. $x = y_1 = 0$, $\varphi = y_2 = 0$, $\dot{x} = y_3 = 0$ a $\dot{\varphi} = y_4 = 0$, takže tyto hodnoty do vypočítaných hodnot dosadíme a dostaneme tak matice:
 			\begin{align*}
 				\mathbf{A} &= \left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & -\frac{gm}{M+2m} & 0 & 0\\
-					0 & -\frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
+					0 & \frac{gm}{M} & 0 & 0\\
+					0 & -\frac{mg+Mg}{Ml} & 0 & 0
 				\end{matrix}\right]\\
 				\mathbf{B} &= \left[\begin{matrix}
 					0\\
 					0\\
-					\frac{1}{M+2m}\\
-					-\frac{1}{l\left(M+2m\right)}
+					-\frac{1}{M}\\
+					-\frac{1}{lM}
 				\end{matrix}\right]
 			\end{align*}
 			Výsledný stavový popis v okolí pracovního bodu $\left[\dot{x}, \dot{\varphi}, x, \varphi\right]=\left[0, 0, 0, 0\right]$ bude tedy vypadat:
@@ -186,8 +186,8 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 				\dot{x}&=\left[\begin{matrix}
 					0 & 0 & 1 & 0\\
 					0 & 0 & 0 & 1\\
-					0 & -\frac{gm}{M+2m} & 0 & 0\\
-					0 & \frac{mg+Mg}{l\left(M+2m\right)} & 0 & 0
+					0 & \frac{gm}{M} & 0 & 0\\
+					0 & -\frac{mg+Mg}{Ml} & 0 & 0
 				\end{matrix}\right]
 				\left[\begin{matrix}
 					y_1\\
@@ -199,8 +199,8 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 				\left[\begin{matrix}
 					0\\
 					0\\
-					\frac{1}{M+2m}\\
-					-\frac{1}{l\left(M+2m\right)}
+					-\frac{1}{M}\\
+					-\frac{1}{lM}
 				\end{matrix}\right]u\\
 				y&=\left[\begin{matrix}
 					1 & 0 & 0 & 0\\
@@ -215,39 +215,23 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 					y_4
 				\end{matrix}\right]
 			\end{align*}
+			\\Při porovnání chování lineárního a nelineárního modelu zjistíme, že se chovají téměř stejně (obr. \ref{Porovnani_lin_a_nelin_f0_nenul}).
 		\subsection{Dosazení konkrétních hodnot}
 			Nyní si můžeme zvolit konkrétní hodnoty našeho modelu. 
 			\begin{align*}
 				M &= \SI{15}{\kilo\gram}\\
 				m &= \SI{5}{\kilo\gram}\\
 				l &= \SI{1}{\meter}\\
-				g &= \SI{9,81}{\meter\square\second}\\
+				g &= \SI{9,81}{\meter\per\square\second}\\
 			\end{align*}
 			Působící sílu můžeme měnit, abychom mohli ověřit chování v různých situacích.
-		\clearpage
+			\newpage
 		\subsection{Grafy}
 			\begin{figure}[h]
 				\begin{center}
-					\includegraphics[scale=0.3]{Obrazky/Nel_model_f0_nul.eps}
-					\label{Nel_model_f0_nul}
-					\caption{Nelineární model při $f=\SI{0}{\newton}$ a nulových p.p.}
-				\end{center}
-				\begin{center}
-					\includegraphics[scale=0.3]{Obrazky/Lin_model_f0_nul.eps}
-					\label{Lin_model_f0_nul}
-					\caption{Lineární model při $f=\SI{0}{\newton}$ a nulových p.p.}
-				\end{center}
-			\end{figure}
-			\begin{figure}[h]
-				\begin{center}
-					\includegraphics[scale=0.33]{Obrazky/Nelin_model_f0_nenul.eps}
-					\label{Nel_model_f0_nenul}
-					\caption{Nelineární model při $f=\SI{0}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
-				\end{center}
-				\begin{center}
-					\includegraphics[scale=0.33]{Obrazky/Lin_model_f0_nenul.eps}
-					\label{Lin_model_f0_nenul}
-					\caption{Lineární model při $f=\SI{0}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
+					\includegraphics[scale=0.31]{Obrazky/Porovnani_lin_a_nelin_f0_nenul.eps}
+					\label{Porovnani_lin_a_nelin_f0_nenul}
+					\caption{Porovnání lin. a nelin. modelu při $f=\SI{0}{\newton}$ a p.p. $\varphi = \SI{5}{\degree}$}
 				\end{center}
 			\end{figure}
 			\begin{figure}[h]
@@ -285,22 +269,17 @@ thr			Dále můžeme vyjádřit nejvyšší derivace:
 			\end{center}
 		\end{figure}
 		\\Nejprve je potřeba si zvolit požadované póly. V našem případě máme čtyři póly s nulovou reálnou částí (to způsobuje kmitání systému, který je díky tomu na mezi stability). Musíme tak zvolit póly, které mají zápornou reálnou část. Nyní můžeme vypočítat vektor zesílení $K$. Toho dosáhneme např. v Matlabu pomocí funkce $\texttt{K = acker(A, B, p)}$, kde \texttt{A} je matice systému, \texttt{B} je matice řízení a \texttt{p} je vektor požadovaných pólů. 
-	\section{Implementace regulátoru}
-		Po získání vektoru zesílení je možno vytvořit uzavřenou zpětnou vazbu. Můžeme tedy vyzkoušet, jak se bude nově vzniklý systém chovat při nulových počátečních podmínkách (obr. \ref{Stav_reg_f0_nul}) a nenulových počátečních podmínkách (obr. \ref{Stav_reg_f0_nenul}).
+		Po získání vektoru zesílení je možno vytvořit uzavřenou zpětnou vazbu. Můžeme tedy vyzkoušet, jak se bude nově vzniklý systém chovat při nenulových počátečních podmínkách (obr. \ref{Stav_reg_f0_nenul}).
 		\begin{figure}[h]
-			\begin{center}
-				\includegraphics[scale=0.33]{Obrazky/Stav_reg_f0_nul.eps}
-				\label{Stav_reg_f0_nul}
-				\caption{Lineární model se stav. reg. při p.p. $\varphi = \SI{0}{\degree}$}
-			\end{center}
 			\begin{center}
 				\includegraphics[scale=0.33]{Obrazky/Stav_reg_f0_nenul.eps}
 				\label{Stav_reg_f0_nenul}
 				\caption{Lineární model se stav. reg. při p.p. $\varphi = \SI{5}{\degree}$}
 			\end{center}
 		\end{figure}
-		\\Z obou obrázků je vidět, že systém je stabilní.
+		\\Z obou obrázků je vidět, že lineární systém je nyní stabilní.
 		\clearpage
+	\section{Implementace regulátoru do nelineárního systému}
 	\section{Závěr}
 		Cílem práce bylo navrhnout zjednodušený model kyvadla zavěšeném na vozíku a pro ten následně navrhnout regulátor, pomocí kterého celý systém ustabilizujeme. Vhodným regulátorem byl zvolen stavový regulátor.\\
 		Z grafu číslo \ref{Stav_reg_f0_nenul} lze odvodit, že se pomocí stavového regulátoru povedlo ustabilizovat systém z obr. č. \ref{Lin_model_f0_nenul}.

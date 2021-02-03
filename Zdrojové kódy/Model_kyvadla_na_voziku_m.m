@@ -32,7 +32,7 @@ clear;
 syms dx dphi x phi M m l f g ddphi ddx
  
 eq1 = ddx == (-m*l*ddphi*cos(phi)+m*l*dphi^2*sin(phi)+f)/(M+m)
-eq2 = ddphi == (sin(phi)*(dx*dphi-dx+g)+ddx*cos(phi))/(l)
+eq2 = ddphi == (sin(phi)*(-dx*dphi+dx-g)-ddx*cos(phi))/(l)
 
 [ddx, ddphi] = solve([eq1, eq2], [ddx, ddphi])
 
@@ -41,10 +41,16 @@ clear;
 clc;
 syms y1 y2 y3 y4 u m g M l 
 
+% y1 = x
+% y2 = phi
+% y3 = dx
+% y4 = dphi
+%  u = f
+
 f1 = y3
 f2 = y4
-f3 = (l*m*sin(y2)*y4^2-y3*m*cos(y2)*sin(y2)*y4+u+y3*m*cos(y2)*sin(y2)-g*m*cos(y2)*sin(y2))/(m*cos(y2)^2+m+M)
-f4 = (u*cos(y2)-y3*m*sin(y2)+g*m*sin(y2)-M*y3*sin(y2)+M*g*sin(y2)+M*y4*y3*sin(y2)+y3*y4*m*sin(y2)+y4^2*l*m*cos(y2)*sin(y2))/(l*(m*cos(y2)^2+m+M))
+f3 = (l*m*sin(y2)*y4^2 + y3*m*cos(y2)*sin(y2)*y4 - u - y3*m*cos(y2)*sin(y2) + g*m*cos(y2)*sin(y2))/(- m*cos(y2)^2 + M + m)
+f4 = -(u*cos(y2) - y3*m*sin(y2) + g*m*sin(y2) - M*y3*sin(y2) + M*g*sin(y2) + M*y4*y3*sin(y2) + y4*y3*m*sin(y2) + y4^2*l*m*cos(y2)*sin(y2))/(l*(- m*cos(y2)^2 + M + m))
 
 df1_dy1 = diff(f1, y1);
 df1_dy2 = diff(f1, y2);
@@ -113,30 +119,30 @@ B = [df1_du;
 % 
 % sys = ss(A, B, C, D)
 %% linearizace v bode [0, 0, 0, 0]
-df1_dy1 = subs(df1_dy1, [y1 y2 y3 y4], [0 pi 0 0]);
-df1_dy2 = subs(df1_dy2, [y1 y2 y3 y4], [0 pi 0 0]);
-df1_dy3 = subs(df1_dy3, [y1 y2 y3 y4], [0 pi 0 0]);
-df1_dy4 = subs(df1_dy4, [y1 y2 y3 y4], [0 pi 0 0]);
+df1_dy1 = subs(df1_dy1, [y1 y2 y3 y4], [0 0 0 0]);
+df1_dy2 = subs(df1_dy2, [y1 y2 y3 y4], [0 0 0 0]);
+df1_dy3 = subs(df1_dy3, [y1 y2 y3 y4], [0 0 0 0]);
+df1_dy4 = subs(df1_dy4, [y1 y2 y3 y4], [0 0 0 0]);
 
-df2_dy1 = subs(df2_dy1, [y1 y2 y3 y4], [0 pi 0 0]);
-df2_dy2 = subs(df2_dy2, [y1 y2 y3 y4], [0 pi 0 0]);
-df2_dy3 = subs(df2_dy3, [y1 y2 y3 y4], [0 pi 0 0]);
-df2_dy4 = subs(df2_dy4, [y1 y2 y3 y4], [0 pi 0 0]);
+df2_dy1 = subs(df2_dy1, [y1 y2 y3 y4], [0 0 0 0]);
+df2_dy2 = subs(df2_dy2, [y1 y2 y3 y4], [0 0 0 0]);
+df2_dy3 = subs(df2_dy3, [y1 y2 y3 y4], [0 0 0 0]);
+df2_dy4 = subs(df2_dy4, [y1 y2 y3 y4], [0 0 0 0]);
 
-df3_dy1 = subs(df3_dy1, [y1 y2 y3 y4], [0 pi 0 0]);
-df3_dy2 = subs(df3_dy2, [y1 y2 y3 y4], [0 pi 0 0]);
-df3_dy3 = subs(df3_dy3, [y1 y2 y3 y4], [0 pi 0 0]);
-df3_dy4 = subs(df3_dy4, [y1 y2 y3 y4], [0 pi 0 0]);
+df3_dy1 = subs(df3_dy1, [y1 y2 y3 y4], [0 0 0 0]);
+df3_dy2 = subs(df3_dy2, [y1 y2 y3 y4], [0 0 0 0]);
+df3_dy3 = subs(df3_dy3, [y1 y2 y3 y4], [0 0 0 0]);
+df3_dy4 = subs(df3_dy4, [y1 y2 y3 y4], [0 0 0 0]);
 
-df4_dy1 = subs(df4_dy1, [y1 y2 y3 y4], [0 pi 0 0]);
-df4_dy2 = subs(df4_dy2, [y1 y2 y3 y4], [0 pi 0 0]);
-df4_dy3 = subs(df4_dy3, [y1 y2 y3 y4], [0 pi 0 0]);
-df4_dy4 = subs(df4_dy4, [y1 y2 y3 y4], [0 pi 0 0]);
+df4_dy1 = subs(df4_dy1, [y1 y2 y3 y4], [0 0 0 0]);
+df4_dy2 = subs(df4_dy2, [y1 y2 y3 y4], [0 0 0 0]);
+df4_dy3 = subs(df4_dy3, [y1 y2 y3 y4], [0 0 0 0]);
+df4_dy4 = subs(df4_dy4, [y1 y2 y3 y4], [0 0 0 0]);
 
-df1_du = subs(df1_du, [y1 y2 y3 y4], [0 pi 0 0]);
-df2_du = subs(df2_du, [y1 y2 y3 y4], [0 pi 0 0]);
-df3_du = subs(df3_du, [y1 y2 y3 y4], [0 pi 0 0]);
-df4_du = subs(df4_du, [y1 y2 y3 y4], [0 pi 0 0]);
+df1_du = subs(df1_du, [y1 y2 y3 y4], [0 0 0 0]);
+df2_du = subs(df2_du, [y1 y2 y3 y4], [0 0 0 0]);
+df3_du = subs(df3_du, [y1 y2 y3 y4], [0 0 0 0]);
+df4_du = subs(df4_du, [y1 y2 y3 y4], [0 0 0 0]);
 
 A = [df1_dy1 df1_dy2 df1_dy3 df1_dy4;
     df2_dy1 df2_dy2 df2_dy3 df2_dy4;
@@ -151,29 +157,26 @@ B = [df1_du;
 %% Konkretizace hodnot a zjisteni konkretniho modelu a prenosovych funkci
 clear;
 close;
-f = 0; %sila pusobici na vozik
+f = 5; %sila pusobici na vozik
 M = 15; %hmostnost voziku
 m = 5; %hmotnost tělesa na lane
 dx = 0; %pocatecni rychlost voziku
 x = 0; %pocatecni poloh voziku
 dphi = 0; %pocatecni rychlost kyvadla
-phi = 5*pi/180; %pocatecni poloha kyvadla ve °
+phi = deg2rad(0); %pocatecni poloha kyvadla ve °
 l = 1; %delka zavesu
 g = 9.81; %gravitacni sila
 
 
 A = [ 0, 0, 1, 0;
       0, 0, 0, 1;
-      0, -(g*m)/(M + 2*m), 0, 0;
-      0, -(M*g + g*m)/(l*(M + 2*m)), 0, 0]
+      0, (g*m)/M, 0, 0;
+      0, -(M*g + g*m)/(M*l), 0, 0]
 B = [0;
      0;
-     1/(M + 2*m);
-     -1/(l*(M + 2*m))]
-C = [1 0 0 0;
-    0 1 0 0;
-    0 0 1 0;
-    0 0 0 1]
+     -1/M;
+     -1/(M*l)]
+C = eye(4)
 D = [0;
     0;
     0;
@@ -187,12 +190,14 @@ rank(ctrb(sys.A, sys.B)) %system je riditelny, protoze ma plnou radkovou hodnost
 
 tf = tf(ss(A, B, C, D))
 
+pzmap(sys)
+
 %% Navrh stavoveho regulatoru
 
-p1 = -10 + 0i
-p2 = -10 + 0i
-p3 = -10 + 2.8014i
-p4 = -10 - 2.8014i
+p1 = -10.0000 + 0.0000i
+p2 = -10.0000 + 0.0000i
+p3 = -10.0000 + 3.6166i
+p4 = -10.0000 - 3.6166i
 
 K = acker(sys.A, sys.B, [p1, p2, p3, p4])
 sys_cl = ss(sys.A-sys.B*K,sys.B,sys.C,sys.D)
@@ -226,53 +231,47 @@ xlabel('t [s]')
 ylabel('\omega [rad/s]')
 
 figure;
+grid on;
 subplot(4,1,1)
 plot(out.nelin_x);
-legend('x')
-title('Nelinearizovany model - Poloha vozíku')
-xlabel('t [s]')
-ylabel('s [m]')
+hold on;
+grid on;
 subplot(4,1,2)
 plot(out.nelin_phi);
-legend('\phi')
-title('Nelinearizovany model - Uhel kyvadla \phi')
-xlabel('t [s]')
-ylabel('\phi [°]')
+hold on;
+grid on;
 subplot(4,1,3)
 plot(out.nelin_dx);
-legend('dx')
-title('Nelinearizovany model - Rychlost voziku')
-xlabel('t [s]')
-ylabel('v [m/s]')
+hold on;
+grid on;
 subplot(4,1,4)
 plot(out.nelin_dphi);
-legend('d\phi')
-title('Nelinearizovany model - Uhlova rychlost kyvadla')
-xlabel('t [s]')
-ylabel('\omega [rad/s]')
+hold on;
+grid on;
 
-figure;
+
+
 subplot(4,1,1)
 plot(out.stav_x);
-legend('x')
-title('Linearni model - Poloha vozíku')
+legend('x - Nelin. model', 'x - Lin. model')
+title('Poloha vozíku')
 xlabel('t [s]')
 ylabel('s [m]')
 subplot(4,1,2)
 plot(out.stav_phi);
-legend('\phi')
-title('Linearni model - Uhel kyvadla \phi')
+legend('\phi - Nelin. model', '\phi - Lin. model')
+title('Uhel kyvadla \phi')
 xlabel('t [s]')
 ylabel('\phi [°]')
 subplot(4,1,3)
 plot(out.stav_dx);
-legend('dx')
-title('Linearni model - Rychlost voziku')
+legend('dx - Nelin. model', 'dx - Lin. model')
+title('Rychlost voziku')
 xlabel('t [s]')
 ylabel('v [m/s]')
 subplot(4,1,4)
 plot(out.stav_dphi);
-legend('d\phi')
-title('Linearni model - Uhlova rychlost kyvadla')
+legend('d\phi - Nelin. model', 'd\phi - Lin. model')
+title('Uhlova rychlost kyvadla')
 xlabel('t [s]')
 ylabel('\omega [rad/s]')
