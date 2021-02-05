@@ -157,13 +157,13 @@ B = [df1_du;
 %% Konkretizace hodnot a zjisteni konkretniho modelu a prenosovych funkci
 clear;
 close;
-f = 5; %sila pusobici na vozik
+f = 0; %sila pusobici na vozik
 M = 15; %hmostnost voziku
 m = 5; %hmotnost tělesa na lane
 dx = 0; %pocatecni rychlost voziku
 x = 0; %pocatecni poloh voziku
 dphi = 0; %pocatecni rychlost kyvadla
-phi = deg2rad(0); %pocatecni poloha kyvadla ve °
+phi = deg2rad(1); %pocatecni poloha kyvadla ve °
 l = 1; %delka zavesu
 g = 9.81; %gravitacni sila
 
@@ -192,7 +192,7 @@ tf = tf(ss(A, B, C, D))
 
 pzmap(sys)
 
-%% Navrh stavoveho regulatoru
+% Navrh stavoveho regulatoru
 
 p1 = -10.0000 + 0.0000i
 p2 = -10.0000 + 0.0000i

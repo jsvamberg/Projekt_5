@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  3 FEB 2021 10:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.27)  5 FEB 2021 08:54
 entering extended mode
 **"./Projekt 5 - zpráva.tex"
 ("Projekt 5 - zpráva.tex"
@@ -710,28 +710,19 @@ Underfull \hbox (badness 5231) in paragraph at lines 60--70
 
 [3
 
- <./Obrazky/Kyvadlo.pdf> <./Obrazky/Vozik-kyvadlo.pdf>] [4] [5]
-
-LaTeX Warning: Reference `Porovnani_lin_a_nelin_f0_nenul' on page 6 undefined o
-n input line 218.
-
-[6]
+ <./Obrazky/Kyvadlo.pdf> <./Obrazky/Vozik-kyvadlo.pdf>] [4] [5] [6]
 Package epstopdf Info: Source file: <Obrazky/Porovnani_lin_a_nelin_f0_nenul.eps
 >
 (epstopdf)                    date: 2021-02-03 10:37:09
 (epstopdf)                    size: 781252 bytes
 (epstopdf)             Output file: <Obrazky/Porovnani_lin_a_nelin_f0_nenul-eps
 -converted-to.pdf>
+(epstopdf)                    date: 2021-02-03 10:39:33
+(epstopdf)                    size: 281378 bytes
 (epstopdf)             Command: <epstopdf --outfile=Obrazky/Porovnani_lin_a_nel
 in_f0_nenul-eps-converted-to.pdf Obrazky/Porovnani_lin_a_nelin_f0_nenul.eps>
 (epstopdf)             \includegraphics on input line 232.
-runsystem(epstopdf --outfile=Obrazky/Porovnani_lin_a_nelin_f0_nenul-eps-convert
-ed-to.pdf Obrazky/Porovnani_lin_a_nelin_f0_nenul.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Obrazky/Porovnani_lin_a_nelin_f0_nenul-eps
--converted-to.pdf>
-(epstopdf)                    date: 2021-02-03 10:39:33
-(epstopdf)                    size: 281378 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Obrazky/Porovnani_lin_a_nelin_f0_nenul-eps-con
@@ -894,21 +885,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [10
 
  <./Obrazky/GMK_na_mezi-eps-converted-to.pdf>] [11 <./Obrazky/Stav_reg_f0_nenul
--eps-converted-to.pdf>] [12
+-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `Lin_model_f0_nenul' on page 12 undefined on input lin
+e 285.
+
+[12
 
 ] ("Projekt 5 - zpráva.aux")
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 17549 strings out of 492895
- 335831 string characters out of 3133476
- 388722 words of memory out of 3000000
- 21271 multiletter control sequences out of 15000+200000
+ 17548 strings out of 492895
+ 335811 string characters out of 3133476
+ 388712 words of memory out of 3000000
+ 21270 multiletter control sequences out of 15000+200000
  554550 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,19n,61p,659b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -929,9 +922,9 @@ ublic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 
-Output written on "Projekt 5 - zpráva.pdf" (13 pages, 2533341 bytes).
+Output written on "Projekt 5 - zpráva.pdf" (13 pages, 2534747 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
+ 427 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
