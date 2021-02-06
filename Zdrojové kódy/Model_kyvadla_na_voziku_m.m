@@ -157,7 +157,7 @@ B = [df1_du;
 %% Konkretizace hodnot a zjisteni konkretniho modelu a prenosovych funkci
 clear;
 close;
-f = 0; %sila pusobici na vozik
+f = 10; %sila pusobici na vozik
 M = 15; %hmostnost voziku
 m = 5; %hmotnost tělesa na lane
 dx = 0; %pocatecni rychlost voziku
@@ -202,7 +202,10 @@ p4 = -10.0000 - 3.6166i
 K = acker(sys.A, sys.B, [p1, p2, p3, p4])
 sys_cl = ss(sys.A-sys.B*K,sys.B,sys.C,sys.D)
 %%
-out=sim('Model_kyvadla_na_voziku_m_slx.slx',50)
+out=sim('Nelinearni_model.slx',50)
+out=sim('Nelinearni_model_s_regulatorem.slx',50)
+out=sim('Linearni_model.slx',50)
+out=sim('Linearni_model_s_regulatorem.slx',50)
 
 figure;
 subplot(4,1,1)
