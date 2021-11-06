@@ -3,7 +3,7 @@ clc;
 close all;
 
 
-% syms ddx ddphi dx dphi x phi M m g l f
+syms ddx ddphi dx dphi x phi M m g l f
 % u = l*sin(phi)+x
 % du = l*dphi*cos(phi)+dx
 % 
@@ -13,26 +13,29 @@ close all;
 % T = (1/2)*(M*dx^2)+(1/2)*m*(du)^2+(1/2)*m*(dv)^2
 % V = -m*g*l*cos(phi)
 % L = T - V
-% 
-% 
-% dL_ddx = diff(L, dx)
-% dL_dx = diff(L, x)
-% dL_ddphi = diff(L, dphi)
-% dL_dphi = diff(L, phi)
-% 
-% %%
-% D_dL_ddx = M*ddx+m*ddx+m*ddphi*l*cos(phi)-m*dphi*l*sin(phi)
-% D_dL_ddphi = ddphi*l^2*m*(sin(phi))^2+dphi*l^2*m*cos(phi)*2*sin(phi)
-% 
-% eq1 = D_dL_ddx-dL_dx == f
-% eq2 = D_dL_ddphi-dL_dphi == 0
+
+L = 0.5*M*dx^2+0.5*m*l^2*dphi^2+m*dx*l*dphi*cos(phi)+0.5*m*dx^2+m*g*l*cos(phi)
+
+dL_ddx = diff(L, dx)
+dL_dx = diff(L, x)
+dL_ddphi = diff(L, dphi)
+dL_dphi = diff(L, phi)
+%%
+D_dL_ddx = M*ddx+m*ddx+l*m*(ddphi*cos(phi)-dphi*sin(phi))
+D_dL_ddphi = ddphi*m*l^2+m*l*(ddx*cos(phi)-dx*sin(phi))
+
+%D_dL_ddx = M*ddx+m*ddx+m*ddphi*l*cos(phi)-m*dphi*l*sin(phi)
+%D_dL_ddphi = ddphi*l^2*m*(sin(phi))^2+dphi*l^2*m*cos(phi)*2*sin(phi)
+
+eq1 = D_dL_ddx-dL_dx == f
+eq2 = D_dL_ddphi-dL_dphi == 0
 
 %% Dosazení jedné rovnice za druhou
 clear;
 syms dx dphi x phi M m l f g ddphi ddx
  
-eq1 = ddx == (-m*l*ddphi*cos(phi)+m*l*dphi^2*sin(phi)+f)/(M+m)
-eq2 = ddphi == (sin(phi)*(-dx*dphi+dx-g)-ddx*cos(phi))/(l)
+eq1 = ddx == (f-l*m*(ddphi*cos(phi)-dphi*sin(phi)))/(M+m)
+eq2 = ddphi == (-ddx*cos(phi)+dx*sin(phi)-g*sin(phi)-dphi*dx*sin(phi))/(l)
 
 [ddx, ddphi] = solve([eq1, eq2], [ddx, ddphi])
 
@@ -49,8 +52,10 @@ syms y1 y2 y3 y4 u m g M l
 
 f1 = y3
 f2 = y4
-f3 = (l*m*sin(y2)*y4^2 + y3*m*cos(y2)*sin(y2)*y4 - u - y3*m*cos(y2)*sin(y2) + g*m*cos(y2)*sin(y2))/(- m*cos(y2)^2 + M + m)
-f4 = -(u*cos(y2) - y3*m*sin(y2) + g*m*sin(y2) - M*y3*sin(y2) + M*g*sin(y2) + M*y4*y3*sin(y2) + y4*y3*m*sin(y2) + y4^2*l*m*cos(y2)*sin(y2))/(l*(- m*cos(y2)^2 + M + m))
+%f3 = (l*m*sin(y2)*y4^2 + y3*m*cos(y2)*sin(y2)*y4 - u - y3*m*cos(y2)*sin(y2) + g*m*cos(y2)*sin(y2))/(- m*cos(y2)^2 + M + m)
+%f4 = -(u*cos(y2) - y3*m*sin(y2) + g*m*sin(y2) - M*y3*sin(y2) + M*g*sin(y2) + M*y4*y3*sin(y2) + y4*y3*m*sin(y2) + y4^2*l*m*cos(y2)*sin(y2))/(l*(- m*cos(y2)^2 + M + m))
+f3 = (u + y4*l*m*sin(y2) - y3*m*cos(y2)*sin(y2) + g*m*cos(y2)*sin(y2) + y4*y3*m*cos(y2)*sin(y2))/(- m*cos(y2)^2 + M + m)
+f4 = -(u*cos(y2) - y3*m*sin(y2) + g*m*sin(y2) - M*y3*sin(y2) + M*g*sin(y2) + M*y4*y3*sin(y2) + y4*y3*m*sin(y2) + y4*l*m*cos(y2)*sin(y2))/(l*(- m*cos(y2)^2 + M + m))
 
 df1_dy1 = diff(f1, y1);
 df1_dy2 = diff(f1, y2);
@@ -157,13 +162,13 @@ B = [df1_du;
 %% Konkretizace hodnot a zjisteni konkretniho modelu a prenosovych funkci
 clear;
 close;
-f = 10; %sila pusobici na vozik
+f = 0; %sila pusobici na vozik
 M = 15; %hmostnost voziku
 m = 5; %hmotnost tělesa na lane
 dx = 0; %pocatecni rychlost voziku
 x = 0; %pocatecni poloh voziku
 dphi = 0; %pocatecni rychlost kyvadla
-phi = deg2rad(1); %pocatecni poloha kyvadla ve °
+phi = deg2rad(5); %pocatecni poloha kyvadla ve °
 l = 1; %delka zavesu
 g = 9.81; %gravitacni sila
 
@@ -174,7 +179,7 @@ A = [ 0, 0, 1, 0;
       0, -(M*g + g*m)/(M*l), 0, 0]
 B = [0;
      0;
-     -1/M;
+     1/M;
      -1/(M*l)]
 C = eye(4)
 D = [0;
@@ -191,13 +196,14 @@ rank(ctrb(sys.A, sys.B)) %system je riditelny, protoze ma plnou radkovou hodnost
 tf = tf(ss(A, B, C, D))
 
 pzmap(sys)
+pole(sys)
 
 % Navrh stavoveho regulatoru
 
-p1 = -10.0000 + 0.0000i
-p2 = -10.0000 + 0.0000i
-p3 = -10.0000 + 3.6166i
-p4 = -10.0000 - 3.6166i
+p1 = -5.0000 + 0.0000i
+p2 = -5.0000 + 0.0000i
+p3 = -5.0000 + 3.6166i
+p4 = -5.0000 - 3.6166i
 
 K = acker(sys.A, sys.B, [p1, p2, p3, p4])
 sys_cl = ss(sys.A-sys.B*K,sys.B,sys.C,sys.D)
@@ -251,8 +257,6 @@ subplot(4,1,4)
 plot(out.nelin_dphi);
 hold on;
 grid on;
-
-
 
 subplot(4,1,1)
 plot(out.stav_x);
